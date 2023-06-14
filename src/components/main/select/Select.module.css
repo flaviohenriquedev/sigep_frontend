@@ -1,0 +1,8 @@
+.select_container {
+    border-radius: 6px;
+    padding-left: 3px;
+    width: 660px;
+    height: 30px;
+    border: none;
+    outline: none;
+}

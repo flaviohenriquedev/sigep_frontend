@@ -1,0 +1,8 @@
+.client_container {
+    display: flex;
+    border-bottom: 2px solid transparent;
+}
+
+.client_container:hover {
+    border-bottom: 2px solid white;
+}

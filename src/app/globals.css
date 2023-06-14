@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --header-gradient: linear-gradient(24deg, rgba(29,53,87,1) 0%, rgba(24,68,130,1) 100%);
+    --background-color: #F1FAEE;
+    --primary-color: #1D3557;
+    --secondary-color: #457B9D;
+    --tertiary-color: #A8DADC;
+
+    --container-widht: 25rem;
+    --container-height: 10rem;
+    --background-menu-item: linear-gradient(124deg, rgba(0,163,204,1) 0%, rgba(0,204,255,1) 100%);
+    --header-background: linear-gradient(270deg, rgba(0,0,68,1) 0%, rgba(0,0,110,1) 100%);
+
+    --clr-mn-it-1: #0079FF;
+    --clr-mn-it-2: #54B435;
+    --clr-mn-it-3: #9336B4;
+    --clr-mn-it-4: #B31312;
+    --clr-mn-it-5: #00FFCA;
+    --clr-mn-it-6: #FFEA20;
+
+    --input-outline: none;
+    --input-height: 30px;
+    --input-border-radius: 2px;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--tertiary-color);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--tertiary-color);
+    border-radius: 20px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    list-style-type: none;
+}
+
+body {
+    height: 100vh;
+    background: var(--background-color);
+}
+
+#main {
+    margin-top: 4rem;
+}
+
+.input_label {
+    display: flex;
+    flex-direction: column;
+}
+
