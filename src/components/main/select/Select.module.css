@@ -1,5 +1,5 @@
 .select_container {
-    border-radius: 6px;
+    border-radius: var(--input-border-radius);
     padding-left: 3px;
     width: 660px;
     height: 30px;

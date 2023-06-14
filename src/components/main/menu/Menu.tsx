@@ -17,6 +17,11 @@ export default function Menu() {
 
     const modules = [
         {
+            title: 'Compras',
+            icon: <IconCalendarDollar size={60} stroke={1}/>,
+            href: "/manager/shopping"
+        },
+        {
             title: 'Gestão Contábil',
             icon: <IconAbacus size={60} stroke={1}/>,
             href: '/manager/accountant'
@@ -47,74 +52,14 @@ export default function Menu() {
             href: '/'
         },
         {
-            title: 'Previdência',
-            icon: '',
-            href: '/'
-        },
-        {
-            title: 'Controle Interno',
-            icon: '',
-            href: '/'
-        },
-        {
-            title: 'Compras',
-            icon: <IconCalendarDollar size={60} stroke={1}/>,
-            href: "/manager/shopping"
-        },
-        {
             title: 'Frotas',
             icon: <IconCar size={60} stroke={1}/>,
             href: '/manager/fleet'
         },
         {
-            title: 'Patrimônio',
-            icon: '',
-            href: '/'
-        },
-        {
-            title: 'Portal do Cidadão',
-            icon: '',
-            href: '/'
-        },
-        {
-            title: 'Gestão Educacional',
-            icon: '',
-            href: '/'
-        },
-        {
-            title: 'Portal Social',
-            icon: '',
-            href: '/'
-        },
-        {
-            title: 'Web Hospitalar',
-            icon: '',
-            href: '/'
-        },
-        {
             title: 'Cemitério',
             icon: <IconGrave size={60} stroke={1}/>,
             href: '/manager/cemetery'
-        },
-        {
-            title: 'Gestão de Trânsito',
-            icon: '',
-            href: '/'
-        },
-        {
-            title: 'Ouvidoria',
-            icon: '',
-            href: '/'
-        },
-        {
-            title: 'Contas a Pagar',
-            icon: '',
-            href: '/'
-        },
-        {
-            title: 'Pregão',
-            icon: '',
-            href: '/'
         },
     ]
 

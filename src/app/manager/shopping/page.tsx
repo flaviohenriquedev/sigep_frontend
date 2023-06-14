@@ -1,10 +1,11 @@
+import styles from './page.module.css'
+
 export default function ShoppingPage() {
     return (
-        <div>
+        <div className={styles.shopping_initial_page}>
             <div>
-                <h3>Gráficos e mais gráficos</h3>
                 <div>
-                    <h1>Área de Gráficos</h1>
+                    <h1>Área de Gráficos - INICIAL</h1>
                 </div>
             </div>
         </div>
