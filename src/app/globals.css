@@ -13,32 +13,16 @@
     --header-background: linear-gradient(270deg, rgba(0,0,68,1) 0%, rgba(0,0,110,1) 100%);
 
     --clr-mn-it-1: #0079FF;
-    --clr-mn-it-2: #54B435;
-    --clr-mn-it-3: #9336B4;
-    --clr-mn-it-4: #B31312;
-    --clr-mn-it-5: #00FFCA;
-    --clr-mn-it-6: #FFEA20;
 
     --input-outline: none;
     --input-height: 30px;
     --input-border-radius: 2px;
-}
 
-/* Works on Firefox */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: var(--tertiary-color);
-}
+    --pageheader-height: 40px;
+    --pagesidebar-closed: 5%;
+    --pagesidebar-expanded: 20%;
+    --pagemain-marginsidebar: 2%;
 
-/* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-    width: 12px;
-}
-
-
-*::-webkit-scrollbar-thumb {
-    background-color: var(--tertiary-color);
-    border-radius: 20px;
 }
 
 * {
@@ -48,10 +32,23 @@
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     list-style-type: none;
+
+    /* Works on Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--tertiary-color);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--tertiary-color);
+    border-radius: 20px;
 }
 
 body {
-    height: 100vh;
     background: var(--background-color);
 }
 
@@ -63,4 +60,3 @@ body {
     display: flex;
     flex-direction: column;
 }
-

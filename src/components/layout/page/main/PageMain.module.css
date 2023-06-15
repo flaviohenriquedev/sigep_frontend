@@ -1,0 +1,16 @@
+.pagemain_container {
+    margin-left: calc(
+        var(--pagesidebar-closed) + var(--pagemain-marginsidebar)
+    );
+    transition: 0.3s ease;
+}
+
+.pagemain_container_expanded {
+    margin-left: calc(
+        var(--pagesidebar-expanded) + var(--pagemain-marginsidebar)
+    );
+}
+
+.page_info {
+    background-color: brown;
+}

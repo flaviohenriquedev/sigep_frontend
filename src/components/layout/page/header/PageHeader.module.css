@@ -1,0 +1,7 @@
+.pageheader_container {
+    display: flex;
+    position: fixed;
+    background-color: blue;
+    width: 100%;
+    height: var(--pageheader-height);
+}

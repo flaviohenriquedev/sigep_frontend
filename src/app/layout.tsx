@@ -1,5 +1,5 @@
 import './globals.css'
-import Header from "@/components/main/header/Header";
+import Header from "@/components/layout/core/header/Header";
 
 
 export const metadata = {
@@ -16,10 +16,10 @@ export default function RootLayout({
         <html lang="pt-br">
         <link rel="icon" href="/favicon.png" sizes="any"/>
         <body>
-            <Header/>
-            <div id="main">
-                {children}
-            </div>
+        <Header />
+        <div id="main">
+            {children}
+        </div>
         </body>
         </html>
     )

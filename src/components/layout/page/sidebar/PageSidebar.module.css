@@ -1,0 +1,17 @@
+.pagesidebar_container {
+    background-color: red;
+    width: var(--pagesidebar-closed);
+    height: 100%;
+    transition: 0.3s ease;
+    position: fixed;
+}
+
+.pagesidebar_container_expanded {
+    width: var(--pagesidebar-expanded);
+}
+
+.toggle_sidebar {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
