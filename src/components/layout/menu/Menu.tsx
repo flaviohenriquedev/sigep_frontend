@@ -13,7 +13,32 @@ export default function Menu() {
             title: 'Compras',
             icon: <IconCalendarDollar size={60} stroke={1}/>,
             href: "/manager/shopping"
-        }
+        },
+        {
+            title: 'Frotas',
+            icon: <IconCalendarDollar size={60} stroke={1}/>,
+            href: "/manager/shopping"
+        },
+        {
+            title: 'Arrecadação',
+            icon: <IconCalendarDollar size={60} stroke={1}/>,
+            href: "/manager/shopping"
+        },
+        {
+            title: 'Recursos Humanos',
+            icon: <IconCalendarDollar size={60} stroke={1}/>,
+            href: "/manager/shopping"
+        },
+        {
+            title: 'Contábil',
+            icon: <IconCalendarDollar size={60} stroke={1}/>,
+            href: "/manager/shopping"
+        },
+        {
+            title: 'Pregão',
+            icon: <IconCalendarDollar size={60} stroke={1}/>,
+            href: "/manager/shopping"
+        },
     ]
 
     function renderModules() {

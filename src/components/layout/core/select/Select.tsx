@@ -9,8 +9,8 @@ type SelectProps = {
 export default function Select(props: SelectProps) {
 
     function renderOptions() {
-        return props.options.map((option, index) => {
-            return <option  key={index}
+        return props.options.map((option) => {
+            return <option  key={option.id}
                             value={option.id}>
                 {`${option.code} - ${option.description}`}
             </option>
