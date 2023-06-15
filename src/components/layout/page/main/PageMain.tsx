@@ -17,8 +17,12 @@ const PageMain = (props: PageMainProps) => {
         <div className={`${styles.pagemain_container}
                 ${sidebarExpanded ? styles.pagemain_container_expanded : ''}
             `}>
-            <div className={styles.page_info}>Page Info</div>
-            <div>{props.children}</div>
+            <div className={styles.pagemain_info}>
+                <h3>Page Info</h3>
+            </div>
+            <div className={styles.pagemain_children}>
+                {props.children}
+            </div>
         </div>
     );
 };

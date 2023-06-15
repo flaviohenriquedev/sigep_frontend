@@ -1,7 +1,10 @@
 .pageheader_container {
     display: flex;
+    align-items: center;
     position: fixed;
-    background-color: blue;
+    padding-left: 1%;
+    background-color: var(--secondary-color);
     width: 100%;
     height: var(--pageheader-height);
+    color: white;
 }

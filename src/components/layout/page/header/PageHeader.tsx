@@ -2,7 +2,9 @@ import styles from './PageHeader.module.css'
 
 const PageHeader = () => {
   return (
-    <header className={styles.pageheader_container}>PageHeader</header>
+    <header className={styles.pageheader_container}>
+      <h2>PageHeader</h2>
+    </header>
   )
 }
 

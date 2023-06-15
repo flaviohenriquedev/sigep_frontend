@@ -7,22 +7,17 @@
     --secondary-color: #457B9D;
     --tertiary-color: #A8DADC;
 
-    --container-widht: 25rem;
-    --container-height: 10rem;
-    --background-menu-item: linear-gradient(124deg, rgba(0,163,204,1) 0%, rgba(0,204,255,1) 100%);
-    --header-background: linear-gradient(270deg, rgba(0,0,68,1) 0%, rgba(0,0,110,1) 100%);
-
-    --clr-mn-it-1: #0079FF;
-
     --input-outline: none;
     --input-height: 30px;
     --input-border-radius: 2px;
 
+    --layout-border-radius: 4px;
+
     --pageheader-height: 40px;
     --pagesidebar-closed: 5%;
     --pagesidebar-expanded: 20%;
-    --pagemain-marginsidebar: 2%;
-
+    --pagemain-marginsidebar: 1%;
+    --pagemain-marginheader: 0.5%;
 }
 
 * {
@@ -35,17 +30,17 @@
 
     /* Works on Firefox */
     scrollbar-width: thin;
-    scrollbar-color: var(--tertiary-color);
+    scrollbar-color: var(--primary-color);
 }
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--tertiary-color);
-    border-radius: 20px;
+    background-color: var(--primary-color);
+    border-radius: var(--layout-border-radius);
 }
 
 body {
