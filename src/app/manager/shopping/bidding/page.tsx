@@ -69,37 +69,6 @@ export default function BiddingPage() {
                 <Input className="text" label={`Exemplo`} />
                 <Input className="text" label={`Exemplo`} />
                 <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
-                <Input className="text" label={`Exemplo`} />
             </form>
         </div>
     );

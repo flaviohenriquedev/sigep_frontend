@@ -9,12 +9,15 @@ type HomeButtonProps = {
 }
 
 export default function HomeButton(props: HomeButtonProps) {
-
     const route = useRouter();
+    function handlerHome() {
+        route.push(props.href)
+        localStorage.removeItem('pageName')
+    }
 
     return (
         <div className={styles.home_button_container}
-             onClick={() => route.push(props.href)}>
+             onClick={() => handlerHome()}>
             {props.children}
         </div>
     )

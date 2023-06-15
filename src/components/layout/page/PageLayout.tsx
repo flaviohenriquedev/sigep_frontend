@@ -1,4 +1,6 @@
-import { SideBarContextProvider } from "@/context/layout/SideBarContext";
+'use client'
+
+import {SideBarContextProvider} from "@/context/layout/SideBarContext";
 import styles from "./PageLayout.module.css";
 
 import PageHeader from "./header/PageHeader";
@@ -7,15 +9,20 @@ import PageSidebar from "./sidebar/PageSidebar";
 
 type PageLayoutProps = {
     children: any;
+    menuItems?: any[{}];
+    pageHeader: string;
 };
 
 const PageLayout = (props: PageLayoutProps) => {
+
     return (
         <div className={styles.pagelayout_container}>
-            <PageHeader />
+            <PageHeader pageHeader={props.pageHeader}/>
             <SideBarContextProvider>
                 <div className={styles.sidebar_and_main}>
-                    <PageSidebar />
+                    <PageSidebar
+                        items={props.menuItems}
+                    />
                     <PageMain>{props.children}</PageMain>
                 </div>
             </SideBarContextProvider>

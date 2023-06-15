@@ -3,78 +3,36 @@
 import styles from "./PageSidebar.module.css";
 
 import {useContext} from "react";
+import {useRouter} from 'next/navigation';
 import {SideBarContext} from "@/context/layout/SideBarContext";
 
 import {RiMenuFoldLine, RiMenuUnfoldLine} from 'react-icons/ri'
-import {LuNewspaper} from 'react-icons/lu';
 import Input from "@/components/layout/core/input/Input";
 
-const PageSidebar = () => {
-    const { sidebarExpanded, toggleSidebar } = useContext(SideBarContext);
+type PageSidebarProps = {
+    items: any[{}];
+}
 
-    const items = [
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'Licitação'},
-        {code: 1, icon: <LuNewspaper size={25}/>,  description: 'FIM DA PÁGINA'},
-    ]
+const PageSidebar = (props: PageSidebarProps) => {
+
+    const router = useRouter<>();
+    const {sidebarExpanded, toggleSidebar} = useContext(SideBarContext);
 
     function renderMenu() {
-        return items.map((menu) => {
-            return (
-                <div key={menu.code}
-                     className={styles.item}>
-                    <div className={styles.icon}>
-                        {menu.icon}
-                    </div>
-                    {sidebarExpanded &&
-                        <div className={styles.description}>
-                            <label>{menu.description}</label>
+        if (props.items) {
+            return props.items.map((menu) => {
+                return (
+                    <div key={menu.code}
+                         className={styles.item}
+                         onClick={() => router.replace(`${menu.href}?pn=${menu.pageName}`)}>
+                        <div style={{display: "flex", alignItems: "center", gap: "1rem"}}>
+                            {menu.icon}
+                            {sidebarExpanded && `${menu.description}`}
                         </div>
-                    }
-                </div>
-            )
-        })
+                    </div>
+                )
+            })
+        }
     }
 
     return (
