@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 :root{
     --header-gradient: linear-gradient(24deg, rgba(29,53,87,1) 0%, rgba(24,68,130,1) 100%);
-    --background-color: #FEFCFF;
+    --background-color: #E5E4E2;
     --primary-color: #1D3557;
     --secondary-color: #457B9D;
     --tertiary-color: #A8DADC;
 
-    --letter-color-default: darkslategrey;
+    --elements-color: #f2f3f4;
+    --elements-border: #ffff;
+
+    --letter-color-default: #353839;
 
     --input-outline: none;
     --input-height: 30px;
@@ -15,8 +18,8 @@
     --layout-border-radius: 4px;
 
     --pageheader-height: 40px;
-    --pagesidebar-closed: 5%;
-    --pagesidebar-expanded: 20%;
+    --pagesidebar-closed: 4rem;
+    --pagesidebar-expanded: 15rem;
     --pagemain-marginsidebar: 1%;
     --pagemain-marginheader: 0.5%;
 }

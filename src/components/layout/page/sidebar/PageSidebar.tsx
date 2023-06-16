@@ -25,7 +25,7 @@ const PageSidebar = (props: PageSidebarProps) => {
                     <div key={menu.code}
                          className={styles.item}
                          onClick={() => router.replace(`${menu.href}?pn=${menu.pageName}`)}>
-                        <div style={{display: "flex", alignItems: "center", gap: "1rem"}}>
+                        <div className={styles.description}>
                             {menu.icon}
                             <p className={`${sidebarExpanded ? styles.item_p  : styles.item_p_hidden}`}>{menu.description}</p>
                         </div>

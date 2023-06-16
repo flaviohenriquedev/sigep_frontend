@@ -1,9 +1,5 @@
-
-
 import styles from './Menu.module.css'
-import {
-    IconCalendarDollar,
-} from "@tabler/icons-react";
+import {IconAbacus, IconCalendarDollar, IconCar, IconCurrencyDollar, IconUserCheck} from "@tabler/icons-react";
 import MenuItem from "@/components/layout/menu/MenuItem";
 
 export default function Menu() {
@@ -16,39 +12,35 @@ export default function Menu() {
         },
         {
             title: 'Frotas',
-            icon: <IconCalendarDollar size={60} stroke={1}/>,
+            icon: <IconCar size={60} stroke={1}/>,
             href: "/manager/shopping"
         },
         {
             title: 'Arrecadação',
-            icon: <IconCalendarDollar size={60} stroke={1}/>,
+            icon: <IconCurrencyDollar size={60} stroke={1}/>,
             href: "/manager/shopping"
         },
         {
             title: 'Recursos Humanos',
-            icon: <IconCalendarDollar size={60} stroke={1}/>,
+            icon: <IconUserCheck size={60} stroke={1}/>,
             href: "/manager/shopping"
         },
         {
             title: 'Contábil',
-            icon: <IconCalendarDollar size={60} stroke={1}/>,
-            href: "/manager/shopping"
-        },
-        {
-            title: 'Pregão',
-            icon: <IconCalendarDollar size={60} stroke={1}/>,
+            icon: <IconAbacus size={60} stroke={1}/>,
             href: "/manager/shopping"
         },
     ]
 
     function renderModules() {
+
         return modules.map((module, index) => {
             return (
-                <MenuItem key={index}
-                          title={module.title}
-                          href={module.href}>
-                    {module.icon}
-                </MenuItem>
+                    <MenuItem key={index}
+                              title={module.title}
+                              href={module.href}>
+                        {module.icon}
+                    </MenuItem>
             )
         })
     }

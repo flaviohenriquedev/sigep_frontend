@@ -21,14 +21,16 @@
     height: 3rem;
     margin-bottom: 0.5rem;
     padding-right: 0.5rem;
-    background-color: var(--primary-color);
+    background-color: var(--elements-color);
+    border: 1px solid var(--elements-border);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .toggle_sidebar_icon {
     display: flex;
     justify-content: end;
     width: 100%;
-    color: white;
+    color: var(--letter-color-default);
     transition: 0.1s all;
 }
 
@@ -60,21 +62,25 @@
     width: 100%;
     height: 100%;
     border-top-right-radius: var(--layout-border-radius);
-    background-color: var(--primary-color);
+    background-color: var(--elements-color);
     padding: 1rem 1.5rem 15rem 1.5rem;
     overflow-y: auto;
+    border: 1px solid var(--elements-border);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .item {
     display: flex;
     align-items: center;
     padding: 0.8rem 0.8rem 0.8rem 0;
-    border-bottom: 1px solid var(--secondary-color);
-    color: white;
+    color: var(--letter-color-default);
+    transition: 0.5s all;
 }
 
 .item:hover {
     cursor: pointer;
+    transition: 0.5s all;
+    border-bottom: 1px solid gray;
 }
 
 .item_p {
@@ -96,11 +102,7 @@
 
 .description {
     display: flex;
-    justify-content: start;
     align-items: center;
-    width: 100%;
-    margin-left: 1rem;
-    font-size: 15pt;
-    color: white;
-    transition: 0.3s ease;
+    gap: 1rem;
+    font-size: 10pt;
 }

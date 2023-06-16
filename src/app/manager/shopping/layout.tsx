@@ -11,7 +11,7 @@ export default function LayoutShopping({
     const items = [
         {
             code: 1,
-            icon: <LuNewspaper size={25}/>,
+            icon: <LuNewspaper size={20}/>,
             description: 'Licitação',
             pageName: 'Licitação',
             href: 'manager/shopping/bidding'
@@ -19,7 +19,7 @@ export default function LayoutShopping({
 
         {
             code: 2,
-            icon: <BiPurchaseTag size={25}/>,
+            icon: <BiPurchaseTag size={20}/>,
             description: 'Solicitação de Compra',
             pageName: 'Solicitação de Compra',
             href: 'manager/shopping/construct'
