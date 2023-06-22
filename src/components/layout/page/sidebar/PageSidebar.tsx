@@ -10,12 +10,12 @@ import {RiMenuFoldLine, RiMenuUnfoldLine} from 'react-icons/ri'
 import Input from "@/components/layout/core/input/Input";
 
 type PageSidebarProps = {
-    items: any[{}];
+    items: any[];
 }
 
 const PageSidebar = (props: PageSidebarProps) => {
 
-    const router = useRouter<>();
+    const router = useRouter();
     const {sidebarExpanded, toggleSidebar} = useContext(SideBarContext);
 
     function renderMenu() {

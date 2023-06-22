@@ -13,22 +13,7 @@ export default function Menu() {
         {
             title: 'Frotas',
             icon: <IconCar size={60} stroke={1}/>,
-            href: "/manager/shopping"
-        },
-        {
-            title: 'Arrecadação',
-            icon: <IconCurrencyDollar size={60} stroke={1}/>,
-            href: "/manager/shopping"
-        },
-        {
-            title: 'Recursos Humanos',
-            icon: <IconUserCheck size={60} stroke={1}/>,
-            href: "/manager/shopping"
-        },
-        {
-            title: 'Contábil',
-            icon: <IconAbacus size={60} stroke={1}/>,
-            href: "/manager/shopping"
+            href: "/manager/fleet"
         },
     ]
 

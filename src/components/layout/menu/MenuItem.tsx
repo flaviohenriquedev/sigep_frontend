@@ -17,7 +17,7 @@ export default function MenuItem(props: MenuItemProps) {
         <div
             id="menu_item_container"
             className={styles.container}
-            onClick={() => route.push(`${props.href}?ph=${props.title}`)}
+            onClick={() => route.push(props.href)}
         >
             <div id="menu_item_icon_and_text" className={styles.icon_and_text}>
                 <div id="menu_item_icon" className={styles.icon}>
