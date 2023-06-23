@@ -9,7 +9,7 @@ import PageSidebar from "./sidebar/PageSidebar";
 
 type PageLayoutProps = {
     children: any;
-    menuItems?: any[{}];
+    menuItems: any[];
     pageHeader: string;
 };
 
@@ -21,7 +21,7 @@ const PageLayout = (props: PageLayoutProps) => {
             <SideBarContextProvider>
                 <div className={styles.sidebar_and_main}>
                     <PageSidebar
-                        items={props.menuItems}
+                        data={props.menuItems}
                     />
                     <PageMain>{props.children}</PageMain>
                 </div>
