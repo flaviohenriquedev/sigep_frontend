@@ -2,20 +2,7 @@ import { AiOutlineNotification } from 'react-icons/ai';
 import { BiPurchaseTag } from "react-icons/bi";
 import { FaFileContract, FaSortAmountUp } from 'react-icons/fa';
 import { LuNewspaper } from "react-icons/lu";
-
-export type MenuItem = {
-    icon: JSX.Element;
-    description: string;
-    pageName: string;
-    href?: string;
-    submenu?: SubMenuItem[];
-};
-
-export type SubMenuItem = {
-    description: string;
-    href?: string;
-    submenu?: SubMenuItem[];
-}
+import { MenuItem } from '../../../types/shopping/ShoppingTypes'
 
 const iconSize: number | string = '1.3rem';
 

@@ -7,7 +7,7 @@ import { SideBarContext } from "@/context/layout/SideBarContext";
 
 import Input from "@/components/layout/core/input/Input";
 
-import { MenuItem } from "@/data/shopping/side_menu/ShoppingSideMenuData";
+import { MenuItem } from "../../../../types/shopping/ShoppingTypes";
 
 import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
 import Menu from "./Menu";

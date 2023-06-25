@@ -4,7 +4,7 @@ import { SideBarContext } from "@/context/layout/SideBarContext";
 import {
     MenuItem,
     SubMenuItem,
-} from "@/data/shopping/side_menu/ShoppingSideMenuData";
+} from "../../../../types/shopping/ShoppingTypes";
 import { useContext, useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import SubMenu from "./SubMenu";
