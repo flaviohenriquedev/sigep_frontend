@@ -4,26 +4,22 @@ import { createContext, useState  } from "react";
 
 type SideBarContextProps = {
     sidebarExpanded: boolean;
-    toggleSidebar: () => void;
+    setSidebarExpanded: (value: boolean) => void;
 }
 
 export const SideBarContext = createContext<SideBarContextProps>({
     sidebarExpanded: true,
-    toggleSidebar: () => {},
+    setSidebarExpanded: () => {},
 })
 
 export const SideBarContextProvider = ({children} : {children: React.ReactNode}) => {
 
     const [sidebarExpanded, setSidebarExpanded] = useState(true);
 
-    const toggleSidebar = () => {
-        setSidebarExpanded(!sidebarExpanded);
-    };
-
     return (
         <SideBarContext.Provider value={{
             sidebarExpanded,
-            toggleSidebar,
+            setSidebarExpanded,
         }}>
             {children}
         </SideBarContext.Provider>

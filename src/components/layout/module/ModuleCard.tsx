@@ -1,6 +1,6 @@
-import styles from './Menu.module.css'
-import {IconAbacus, IconCalendarDollar, IconCar, IconCurrencyDollar, IconUserCheck} from "@tabler/icons-react";
-import MenuItem from "@/components/layout/menu/MenuItem";
+import ModuleCardItem from "@/components/layout/module/ModuleCardItem";
+import { IconCalendarDollar, IconCar } from "@tabler/icons-react";
+import styles from './ModuleCard.module.css';
 
 export default function Menu() {
 
@@ -21,11 +21,11 @@ export default function Menu() {
 
         return modules.map((module, index) => {
             return (
-                    <MenuItem key={index}
+                    <ModuleCardItem key={index}
                               title={module.title}
                               href={module.href}>
                         {module.icon}
-                    </MenuItem>
+                    </ModuleCardItem>
             )
         })
     }

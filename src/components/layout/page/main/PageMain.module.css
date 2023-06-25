@@ -1,16 +1,8 @@
 .pagemain_container {
-    margin-left: calc(
-        var(--pagesidebar-closed) + var(--pagemain-marginsidebar)
-    );
     transition: 0.3s ease;
     width: 100%;
     height: 100%;
-}
-
-.pagemain_container_expanded {
-    margin-left: calc(
-        var(--pagesidebar-expanded) + var(--pagemain-marginsidebar)
-    );
+    margin-left: 1rem;
 }
 
 .pagemain_info {

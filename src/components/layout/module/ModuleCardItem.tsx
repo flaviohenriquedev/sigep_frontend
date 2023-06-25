@@ -1,7 +1,7 @@
 'use client'
 
 import {useRouter} from 'next/navigation';
-import styles from './MenuItem.module.css';
+import styles from './ModuleCardItem.module.css';
 
 type MenuItemProps = {
     title: string;

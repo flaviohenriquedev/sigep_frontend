@@ -1,9 +1,9 @@
-import Menu from "@/components/layout/menu/Menu";
+import ModuleCard from "@/components/layout/module/ModuleCard";
 
 export default function Home() {
     return (
         <div>
-            <Menu />
+            <ModuleCard />
         </div>
     )
 }

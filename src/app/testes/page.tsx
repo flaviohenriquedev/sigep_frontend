@@ -1,20 +1,24 @@
-import * as Data from '../../data/shopping/side_menu/ShoppingSideMenuData'
-import Menu from './Menu'
-
-export default function Page() {
-
-    function renderMenu(data: Data.MenuItem[]) {
-        return data.map(m => {
-            return <Menu icon={m.icon}
-                         description={m.description}
-                         pageName={m.pageName}
-                         submenu={m.submenu}/>
-        })
-    }
-
+export default function TestPage() {
     return (
-        <ul>
-            {renderMenu(Data.ShoppingSideMenuData)}
+        <ul> Lista
+            <li>
+                Item 1
+            </li>
+            <li>
+                Item 2
+            </li>
+            <li>
+                Item 3
+                <ul>
+                    <li>
+                        Item 1.1
+                    </li>
+                    <li>
+                        Item 1.2
+                    </li>
+                </ul>
+            </li>
+
         </ul>
     )
 }
