@@ -1,29 +1,29 @@
 "use client";
 
 import { SideBarContext } from "@/context/layout/SideBarContext";
+import { useContext, useEffect, useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 import {
     MenuItem,
     SubMenuItem,
-} from "../../../../types/shopping/ShoppingTypes";
-import { useContext, useEffect, useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
+} from "../../../../@types/shopping/ShoppingTypes";
 import SubMenu from "./SubMenu";
 
 import styles from "./Menu.module.css";
 
 type MenuProps = {
-    menuItem: MenuItem;
+    menuItem: MenuItem;    
 };
 
 export default function Menu(props: MenuProps) {
-    const { sidebarExpanded, setSidebarExpanded } = useContext(SideBarContext);
+    const { sidebarExpanded } = useContext(SideBarContext);
     const [showMenu, setShowMenu] = useState<boolean>(false);
 
     useEffect(() => {
         if (!sidebarExpanded && showMenu) {
             setShowMenu(false);
         }
-    }, [sidebarExpanded]);
+    }, [sidebarExpanded, showMenu]);
 
     function renderSubMenu(data: SubMenuItem[]) {
         return data.map((sub, i) => {
@@ -51,13 +51,21 @@ export default function Menu(props: MenuProps) {
         >
             <div onClick={handleClick} className={styles.menu_title_container}>
                 <div className={styles.icon_and_description}>
-                    <div className={styles.menu_title_icon}>{props.menuItem.icon}</div>
+                    <div className={styles.menu_title_icon}>
+                        {props.menuItem.icon}
+                    </div>
                     <div className={styles.menu_title_description}>
                         {props.menuItem.description}
                     </div>
                 </div>
                 {sidebarExpanded && props.menuItem.submenu && (
-                    <div className={`${styles.arrow} ${!showMenu ? styles.arrow_expanded : styles.arrow_closed}`}>
+                    <div
+                        className={`${styles.arrow} ${
+                            !showMenu
+                                ? styles.arrow_expanded
+                                : styles.arrow_closed
+                        }`}
+                    >
                         <IoIosArrowDown />
                     </div>
                 )}
@@ -71,7 +79,11 @@ export default function Menu(props: MenuProps) {
                             : styles.menu_item_closed
                     }`}
                 >
-                    {!sidebarExpanded && <label>{props.menuItem.description}</label>}
+                    {!sidebarExpanded && (
+                        <div className={styles.menu_item_closed_title}>
+                            {props.menuItem.description}
+                        </div>
+                    )}
                     {renderSubMenu(props.menuItem.submenu)}
                 </ul>
             ) : null}

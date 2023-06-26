@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/data/shopping/side_menu/ShoppingSideMenuData.ts", "src/icons/Icons.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/data/shopping/routes/ShoppingSideMenuData.ts", "src/icons/Icons.jsx"],
   "exclude": ["node_modules"]
 }

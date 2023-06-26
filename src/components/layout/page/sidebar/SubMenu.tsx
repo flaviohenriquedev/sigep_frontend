@@ -2,7 +2,8 @@
 
 import { CSSProperties, useState } from "react";
 import styles from "./SubMenu.module.css";
-import { IoIosArrowDown } from "react-icons/io";
+import { BiLastPage } from "react-icons/bi";
+import { LuListTree } from 'react-icons/lu'
 
 type Props = {
     children: React.ReactNode;
@@ -21,27 +22,20 @@ export default function Item(props: Props) {
             <div
                 style={{
                     display: "flex",
-                    justifyContent: "space-between",
+                    gap: '1rem',
                     alignItems: "center",
                     paddingRight: "1rem",
                 }}
                 onClick={() => setShow(!show)}
                 className={styles.submenu}
             >
+                {props.children ? <LuListTree /> : <BiLastPage size={15} />}
                 <div>
-                    <div className={styles.submenu_description}>
+                    <div className={styles.submenu_description}
+                          style={{ fontWeight: props.children ? 'bold' : 'normal' }}>
                         {props.description}
                     </div>
                 </div>
-                {props.children && (
-                    <div
-                        className={`${styles.arrow} ${
-                            !show ? styles.arrow_expanded : styles.arrow_closed
-                        }`}
-                    >
-                        <IoIosArrowDown />
-                    </div>
-                )}
             </div>
             {props.children ? <ul style={style}>{props.children}</ul> : null}
         </li>

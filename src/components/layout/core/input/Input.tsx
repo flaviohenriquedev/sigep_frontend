@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './Input.module.css'
-import {useEffect, useRef} from "react";
+import {CSSProperties, useEffect, useRef} from "react";
 
 type InputProps = {
     label?: string;
@@ -10,11 +10,18 @@ type InputProps = {
     type?: string;
     placeholder?: string;
     widthAuto?: boolean;
+    width?: string | number
+    value?: string | number | readonly string[] | undefined
+    onChange?: (value: any) => void;
 }
 
 export default function Input(props: InputProps) {
 
     const containerRef = useRef<any>('');
+
+    const style: CSSProperties = {
+        width: props.width ? props.width : ''
+    }
 
     useEffect(() => {
         if(props.widthAuto) {
@@ -24,13 +31,16 @@ export default function Input(props: InputProps) {
 
     return (
         <div className={styles.input_container}
-             ref={containerRef}>
+             ref={containerRef}
+             style={style}>
             {props.label && <label className={styles.label}>{props.label}</label>}
             <input
                 className={`${styles.input} ${styles[props.className]}`}
                 id={props.id}
                 type={props.type}
                 placeholder={props.placeholder}
+                value={props.value}
+                onChange={(e) => props.onChange && props.onChange(e.target.value)}
             />
         </div>
     )

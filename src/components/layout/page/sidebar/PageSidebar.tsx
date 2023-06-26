@@ -1,13 +1,16 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 
 import { SideBarContext } from "@/context/layout/SideBarContext";
 
 import Input from "@/components/layout/core/input/Input";
 
-import { MenuItem } from "../../../../types/shopping/ShoppingTypes";
+import {
+    MenuItem,
+    SubMenuItem,
+} from "../../../../@types/shopping/ShoppingTypes";
 
 import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
 import Menu from "./Menu";
@@ -20,6 +23,8 @@ type PageSidebarProps = {
 const PageSidebar = (props: PageSidebarProps) => {
     const router = useRouter();
     const { sidebarExpanded, setSidebarExpanded } = useContext(SideBarContext);
+    const [searchMenu, setSearchMenu] = useState("");
+    const [filteredData, setFilteredData] = useState<MenuItem[]>(props.data);
 
     function renderMenu(data: MenuItem[]) {
         return data.map((m, i) => {
@@ -27,54 +32,86 @@ const PageSidebar = (props: PageSidebarProps) => {
         });
     }
 
-    return (
-        <>
-            <aside
-                className={`${styles.pagesidebar_container} ${
-                    sidebarExpanded ? styles.pagesidebar_container_expanded : ""
-                }`}
-            >
-                <div id="pagesidebar_top" className={styles.pagesidebar_top}>
-                    <div className={styles.toggle_sidebar}>
-                        <div
-                            className={`${
-                                sidebarExpanded
-                                    ? styles.pagesidebar_search_menu
-                                    : styles.pagesidebar_search_menu_hidden
-                            }`}
-                        >
-                            <Input
-                                className="text"
-                                type="text"
-                                placeholder="Buscar Menu"
-                            />
-                        </div>
-                        <div
-                            className={styles.toggle_sidebar_icon}
-                            onClick={() => setSidebarExpanded(!sidebarExpanded)}
-                        >
-                            {sidebarExpanded ? (
-                                <RiMenuFoldLine
-                                    size={30}
-                                    enableBackground={0}
-                                />
-                            ) : (
-                                <RiMenuUnfoldLine
-                                    size={30}
-                                    enableBackground={0}
-                                />
-                            )}
-                        </div>
-                    </div>
-                </div>
+    const filterMenu = () => {
+        const filteredMap: { [key: string]: MenuItem } = {};
+      
+        if (props.data) {
+          props.data.forEach((d) => {
+            const filteredMenu: MenuItem = { ...d };
+            if (
+              d.description.toLowerCase().includes(searchMenu.toLowerCase()) ||
+              (d.submenu &&
+                d.submenu.some((sub) =>
+                  sub.description.toLowerCase().includes(searchMenu.toLowerCase())
+                ))
+            ) {
+              filteredMap[d.description] = filteredMenu;
+            }
+      
+            if (d.submenu) {
+              const filteredSubmenu = d.submenu.filter((sub) =>
+                sub.description.toLowerCase().includes(searchMenu.toLowerCase())
+              );
+              if (filteredSubmenu.length > 0) {
+                filteredMenu.submenu = filteredSubmenu;
+                filteredMap[d.description] = filteredMenu;
+              }
+            }
+          });
+        }
+      
+        const filtered: MenuItem[] = Object.values(filteredMap);
+        setFilteredData(filtered);
+      };
+      
 
-                <div className={styles.pagesidebar_items}>
-                    <ul className={styles.pagessidebar_list}>
-                        {renderMenu(props.data)}
-                    </ul>
+    useEffect(() => {
+        filterMenu();
+    }, [searchMenu]);
+
+    return (
+        <aside
+            className={`${
+                sidebarExpanded
+                    ? styles.pagesidebar_container_expanded
+                    : styles.pagesidebar_container_close
+            }`}
+        >
+            <div className={styles.toggle_sidebar}>
+                <div
+                    className={`${
+                        sidebarExpanded
+                            ? styles.pagesidebar_search_menu
+                            : styles.pagesidebar_search_menu_hidden
+                    }`}
+                >
+                    <Input
+                        className="text"
+                        type="text"
+                        placeholder="Buscar Menu"
+                        width="20rem"
+                        value={searchMenu}
+                        onChange={setSearchMenu}
+                    />
                 </div>
-            </aside>
-        </>
+                <div
+                    className={styles.toggle_sidebar_icon}
+                    onClick={() => setSidebarExpanded(!sidebarExpanded)}
+                >
+                    {sidebarExpanded ? (
+                        <RiMenuFoldLine size={30} enableBackground={0} />
+                    ) : (
+                        <RiMenuUnfoldLine size={30} enableBackground={0} />
+                    )}
+                </div>
+            </div>
+
+            <div className={styles.pagesidebar_items}>
+                <ul className={styles.pagesidebar_items_list}>
+                    {renderMenu(filteredData)}
+                </ul>
+            </div>
+        </aside>
     );
 };
 

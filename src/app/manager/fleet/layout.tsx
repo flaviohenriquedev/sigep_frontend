@@ -1,4 +1,3 @@
-import PageLayout from "@/components/layout/page/PageLayout";
 import { LuNewspaper } from "react-icons/lu";
 
 export default function LayoutFleet({
@@ -18,9 +17,7 @@ export default function LayoutFleet({
     ];
     return (
         <div>
-            <PageLayout pageHeader="Frotas" menuItems={items}>
-                {children}
-            </PageLayout>
+            <h1>FROTAS</h1>
         </div>
     );
 }

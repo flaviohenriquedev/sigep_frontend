@@ -1,5 +1,5 @@
-import PageLayout from "@/components/layout/page/PageLayout";
-import { ShoppingSideMenuData } from "../../../data/shopping/side_menu/ShoppingSideMenuData";
+import PageContainer from "@/components/layout/page/page_container/PageContainer";
+import { ShoppingSideMenuData } from "../../../data/shopping/routes/ShoppingSideMenuData";
 
 export default function ShoppingLayout({
     children,
@@ -8,9 +8,9 @@ export default function ShoppingLayout({
 }) {
     return (
         <div>
-            <PageLayout pageHeader="Compras" menuItems={ShoppingSideMenuData}>
+            <PageContainer pageTittle="Compras" menuItems={ShoppingSideMenuData}>
                 {children}
-            </PageLayout>
+            </PageContainer>
         </div>
     );
 }

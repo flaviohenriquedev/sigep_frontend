@@ -14,7 +14,7 @@ export const SideBarContext = createContext<SideBarContextProps>({
 
 export const SideBarContextProvider = ({children} : {children: React.ReactNode}) => {
 
-    const [sidebarExpanded, setSidebarExpanded] = useState(true);
+    const [sidebarExpanded, setSidebarExpanded] = useState(false);
 
     return (
         <SideBarContext.Provider value={{

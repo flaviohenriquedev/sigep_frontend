@@ -1,10 +1,13 @@
-import { AiOutlineNotification } from 'react-icons/ai';
+import { AiOutlineNotification } from "react-icons/ai";
 import { BiPurchaseTag } from "react-icons/bi";
-import { FaFileContract, FaSortAmountUp } from 'react-icons/fa';
+import { FaFileContract, FaSortAmountUp } from "react-icons/fa";
 import { LuNewspaper } from "react-icons/lu";
-import { MenuItem } from '../../../types/shopping/ShoppingTypes'
+import { MenuItem } from "../../../@types/shopping/ShoppingTypes";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
-const iconSize: number | string = '1.3rem';
+
+const iconSize: number | string = "1.3rem";
 
 export const ShoppingSideMenuData: MenuItem[] = [
     {
@@ -53,7 +56,7 @@ export const ShoppingSideMenuData: MenuItem[] = [
             },
             {
                 description: "O2 - Consolidação Saldo Licitação"
-            }, 
+            },
             {
                 description: "03 - Inclusão de Saldo"
             }
@@ -120,7 +123,7 @@ export const ShoppingSideMenuData: MenuItem[] = [
                 description: "03 - Solic. Compra / Fornecimento",
                 submenu: [
                     {
-                        description: "3.01 - Análise de itens por Requisição"                        
+                        description: "3.01 - Análise de itens por Requisição"
                     },
                     {
                         description: "3.02 - Solicitação de Compra"

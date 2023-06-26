@@ -1,9 +1,9 @@
-import styles from "./page.module.css";
+import GraphicsPage from "@/components/layout/page/graphics/PageGraphics";
 
 export default function ShoppingPage() {
     return (
-        <div>
+        <GraphicsPage>
             <h1>Área de Gráficos - INICIAL</h1>
-        </div>
+        </GraphicsPage>
     );
 }

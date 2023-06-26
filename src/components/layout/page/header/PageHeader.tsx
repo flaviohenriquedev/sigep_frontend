@@ -2,7 +2,7 @@ import styles from './PageHeader.module.css'
 import Select from "@/components/layout/core/select/Select";
 import Input from "@/components/layout/core/input/Input";
 
-const PageHeader = ({pageHeader}) => {
+const PageHeader = ({ pageTittle }: { pageTittle: string }) => {
 
     const instituitions = [
         {id: 1, code: 1, description: 'PREFEITURA MUNICIPAL'},
@@ -15,7 +15,7 @@ const PageHeader = ({pageHeader}) => {
     return (
         <header className={styles.pageheader_container}>
             <div style={{display: "flex", justifyContent: "space-between", width: "100%"}}>
-                <h2>{pageHeader}</h2>
+                <h2>{pageTittle}</h2>
                 <div style={{display: "flex", gap: "1rem"}}>
                     <Select options={instituitions} />
                     <Input className="date" type="date"/>
