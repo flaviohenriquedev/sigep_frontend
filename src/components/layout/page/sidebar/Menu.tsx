@@ -28,7 +28,7 @@ export default function Menu(props: MenuProps) {
     function renderSubMenu(data: SubMenuItem[]) {
         return data.map((sub, i) => {
             return (
-                <SubMenu description={sub.description} key={i}>
+                <SubMenu data={sub} key={i}>
                     {sub.submenu && renderSubMenu(sub.submenu)}
                 </SubMenu>
             );

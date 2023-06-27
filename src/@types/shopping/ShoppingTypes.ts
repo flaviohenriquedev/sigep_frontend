@@ -8,6 +8,7 @@ export type MenuItem = {
 
 export type SubMenuItem = {
     description: string;
+    pageName?: string;
     href?: string;
     submenu?: SubMenuItem[];
 }

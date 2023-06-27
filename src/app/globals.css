@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 :root{
     --header-gradient: linear-gradient(24deg, rgba(29,53,87,1) 0%, rgba(24,68,130,1) 100%);
     --background-color: #E5E4E2;
@@ -6,8 +7,8 @@
     --secondary-color: #457B9D;
     --tertiary-color: #A8DADC;
 
-    --elements-color: #f2f3f4;
-    --elements-border: #ffff;
+    --elements-color: #FFFF;
+    --elements-border: #f2f3f4;
 
     --letter-color-default: #353839;
 
@@ -18,14 +19,16 @@
     --layout-border-radius: 4px;
 
     --pageheader-height: 40px;
-    --pagesidebar-closed: 4rem;
+    --pagesidebar-closed: 5rem;
     --pagesidebar-expanded: 30rem;
+    --pagesidebar-fontcolor: #757575;
+    --pagesidebar-fontcolor-hover: #000000; 
     --pagemain-marginsidebar: 1%;
     --pagemain-marginheader: 0.5%;
 }
 
 * {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
 
     padding: 0;
     margin: 0;

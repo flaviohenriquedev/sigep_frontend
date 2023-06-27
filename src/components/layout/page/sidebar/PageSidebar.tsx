@@ -1,16 +1,13 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { SideBarContext } from "@/context/layout/SideBarContext";
 
 import Input from "@/components/layout/core/input/Input";
 
-import {
-    MenuItem,
-    SubMenuItem,
-} from "../../../../@types/shopping/ShoppingTypes";
+import { MenuItem } from "../../../../@types/shopping/ShoppingTypes";
 
 import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
 import Menu from "./Menu";
@@ -34,36 +31,41 @@ const PageSidebar = (props: PageSidebarProps) => {
 
     const filterMenu = () => {
         const filteredMap: { [key: string]: MenuItem } = {};
-      
+
         if (props.data) {
-          props.data.forEach((d) => {
-            const filteredMenu: MenuItem = { ...d };
-            if (
-              d.description.toLowerCase().includes(searchMenu.toLowerCase()) ||
-              (d.submenu &&
-                d.submenu.some((sub) =>
-                  sub.description.toLowerCase().includes(searchMenu.toLowerCase())
-                ))
-            ) {
-              filteredMap[d.description] = filteredMenu;
-            }
-      
-            if (d.submenu) {
-              const filteredSubmenu = d.submenu.filter((sub) =>
-                sub.description.toLowerCase().includes(searchMenu.toLowerCase())
-              );
-              if (filteredSubmenu.length > 0) {
-                filteredMenu.submenu = filteredSubmenu;
-                filteredMap[d.description] = filteredMenu;
-              }
-            }
-          });
+            props.data.forEach((d) => {
+                const filteredMenu: MenuItem = { ...d };
+                if (
+                    d.description
+                        .toLowerCase()
+                        .includes(searchMenu.toLowerCase()) ||
+                    (d.submenu &&
+                        d.submenu.some((sub) =>
+                            sub.description
+                                .toLowerCase()
+                                .includes(searchMenu.toLowerCase())
+                        ))
+                ) {
+                    filteredMap[d.description] = filteredMenu;
+                }
+
+                if (d.submenu) {
+                    const filteredSubmenu = d.submenu.filter((sub) =>
+                        sub.description
+                            .toLowerCase()
+                            .includes(searchMenu.toLowerCase())
+                    );
+                    if (filteredSubmenu.length > 0) {
+                        filteredMenu.submenu = filteredSubmenu;
+                        filteredMap[d.description] = filteredMenu;
+                    }
+                }
+            });
         }
-      
+
         const filtered: MenuItem[] = Object.values(filteredMap);
         setFilteredData(filtered);
-      };
-      
+    };
 
     useEffect(() => {
         filterMenu();
@@ -71,10 +73,7 @@ const PageSidebar = (props: PageSidebarProps) => {
 
     return (
         <aside
-            className={`${
-                sidebarExpanded
-                    ? styles.pagesidebar_container_expanded
-                    : styles.pagesidebar_container_close
+            className={`${sidebarExpanded ? styles.pagesidebar_container_expanded : styles.pagesidebar_container_close
             }`}
         >
             <div className={styles.toggle_sidebar}>
@@ -94,15 +93,17 @@ const PageSidebar = (props: PageSidebarProps) => {
                         onChange={setSearchMenu}
                     />
                 </div>
-                <div
-                    className={styles.toggle_sidebar_icon}
-                    onClick={() => setSidebarExpanded(!sidebarExpanded)}
-                >
-                    {sidebarExpanded ? (
-                        <RiMenuFoldLine size={30} enableBackground={0} />
-                    ) : (
-                        <RiMenuUnfoldLine size={30} enableBackground={0} />
-                    )}
+                <div className={styles.toggle_sidebar_icon_container}>
+                    <div
+                        className={styles.toggle_sidebar_icon}
+                        onClick={() => setSidebarExpanded(!sidebarExpanded)}
+                    >
+                        {sidebarExpanded ? (
+                            <RiMenuFoldLine size={20} enableBackground={0} />
+                        ) : (
+                            <RiMenuUnfoldLine size={20} enableBackground={0} />
+                        )}
+                    </div>
                 </div>
             </div>
 

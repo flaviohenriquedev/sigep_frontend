@@ -2,7 +2,7 @@
 
 import styles from "./PageContainer.module.css";
 
-import PageHeader from "../header/PageHeader";
+import PageHeader from "../page_header/PageHeader";
 import PageSidebar from "../sidebar/PageSidebar";
 
 type PageContainerProps = {

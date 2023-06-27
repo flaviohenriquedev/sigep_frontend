@@ -27,15 +27,27 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
+.toggle_sidebar_icon_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
 .toggle_sidebar_icon {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
-    color: var(--letter-color-default);
+    align-items: center;
+    color: var(--pagesidebar-fontcolor);
     transition: 0.1s all;
+    background-color: var(--elements-color);
+    padding: 0.3rem;
+    border-radius: 25%;
+    border: inset  1px solid var(--tertiary-color);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.toggle_sidebar_icon:hover {
+.toggle_sidebar_icon:hover {   
     cursor: pointer;
 }
 
