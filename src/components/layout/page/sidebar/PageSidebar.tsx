@@ -28,47 +28,47 @@ const PageSidebar = (props: PageSidebarProps) => {
         });
     }
 
-    const filterMenu = () => {
-        const filteredMap: { [key: string]: MenuItem } = {};
+    useEffect(() => {
+        const filterMenu = () => {
+            const filteredMap: { [key: string]: MenuItem } = {};
 
-        if (props.data) {
-            props.data.forEach((d) => {
-                const filteredMenu: MenuItem = { ...d };
-                if (
-                    d.description
-                        .toLowerCase()
-                        .includes(searchMenu.toLowerCase()) ||
-                    (d.submenu &&
-                        d.submenu.some((sub) =>
+            if (props.data) {
+                props.data.forEach((d) => {
+                    const filteredMenu: MenuItem = { ...d };
+                    if (
+                        d.description
+                            .toLowerCase()
+                            .includes(searchMenu.toLowerCase()) ||
+                        (d.submenu &&
+                            d.submenu.some((sub) =>
+                                sub.description
+                                    .toLowerCase()
+                                    .includes(searchMenu.toLowerCase())
+                            ))
+                    ) {
+                        filteredMap[d.description] = filteredMenu;
+                    }
+
+                    if (d.submenu) {
+                        const filteredSubmenu = d.submenu.filter((sub) =>
                             sub.description
                                 .toLowerCase()
                                 .includes(searchMenu.toLowerCase())
-                        ))
-                ) {
-                    filteredMap[d.description] = filteredMenu;
-                }
-
-                if (d.submenu) {
-                    const filteredSubmenu = d.submenu.filter((sub) =>
-                        sub.description
-                            .toLowerCase()
-                            .includes(searchMenu.toLowerCase())
-                    );
-                    if (filteredSubmenu.length > 0) {
-                        filteredMenu.submenu = filteredSubmenu;
-                        filteredMap[d.description] = filteredMenu;
+                        );
+                        if (filteredSubmenu.length > 0) {
+                            filteredMenu.submenu = filteredSubmenu;
+                            filteredMap[d.description] = filteredMenu;
+                        }
                     }
-                }
-            });
-        }
+                });
+            }
 
-        const filtered: MenuItem[] = Object.values(filteredMap);
-        setFilteredData(filtered);
-    };
+            const filtered: MenuItem[] = Object.values(filteredMap);
+            setFilteredData(filtered);
+        };
 
-    useEffect(() => {
         filterMenu();
-    }, [searchMenu]);
+    }, [props.data, searchMenu]);
 
     return (
         <aside
