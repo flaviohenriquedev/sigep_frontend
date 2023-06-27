@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 
 import { SideBarContext } from "@/context/layout/SideBarContext";
@@ -18,8 +17,8 @@ type PageSidebarProps = {
 };
 
 const PageSidebar = (props: PageSidebarProps) => {
-    const router = useRouter();
     const { sidebarExpanded, setSidebarExpanded } = useContext(SideBarContext);
+
     const [searchMenu, setSearchMenu] = useState("");
     const [filteredData, setFilteredData] = useState<MenuItem[]>(props.data);
 
@@ -73,7 +72,10 @@ const PageSidebar = (props: PageSidebarProps) => {
 
     return (
         <aside
-            className={`${sidebarExpanded ? styles.pagesidebar_container_expanded : styles.pagesidebar_container_close
+            className={`${
+                sidebarExpanded
+                    ? styles.pagesidebar_container_expanded
+                    : styles.pagesidebar_container_close
             }`}
         >
             <div className={styles.toggle_sidebar}>
@@ -106,7 +108,6 @@ const PageSidebar = (props: PageSidebarProps) => {
                     </div>
                 </div>
             </div>
-
             <div className={styles.pagesidebar_items}>
                 <ul className={styles.pagesidebar_items_list}>
                     {renderMenu(filteredData)}

@@ -1,15 +1,36 @@
 .submenu_container {
     font-size: 0.8rem;
-    margin: 1rem 0 0.5rem 1.5rem;
-    
+    margin: 0.5rem 0 0.2rem 1.5rem;
 }
 
 .submenu {
-
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-right: 1rem;
+    height: 1.5rem;
+    
 }
 
 .submenu:hover {
+    color: var(--pagesidebar-fontcolor-hover);
     cursor: pointer;
+}
+
+.submenu_icon_link,
+.submenu_icon_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+.submenu:active .submenu_icon_link {
+    transform: translateX(10px);
+}
+
+.submenu:active .submenu_icon_list {
+    transform: scale(0.50); 
 }
 
 .submenu_description {

@@ -2,7 +2,7 @@
 
 import { SideBarContext } from "@/context/layout/SideBarContext";
 import { useContext, useEffect, useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import {
     MenuItem,
     SubMenuItem,
@@ -12,12 +12,13 @@ import SubMenu from "./SubMenu";
 import styles from "./Menu.module.css";
 
 type MenuProps = {
-    menuItem: MenuItem;    
+    menuItem: MenuItem;
 };
 
 export default function Menu(props: MenuProps) {
     const { sidebarExpanded } = useContext(SideBarContext);
     const [showMenu, setShowMenu] = useState<boolean>(false);
+    const [menuSelected, setMenuSelected] = useState(false);
 
     useEffect(() => {
         if (!sidebarExpanded && showMenu) {
@@ -35,8 +36,9 @@ export default function Menu(props: MenuProps) {
         });
     }
 
-    function handleClick() {
+    function handleClickMenu() {
         if (sidebarExpanded) {
+            setMenuSelected(!menuSelected);
             setShowMenu(!showMenu);
         }
     }
@@ -49,7 +51,12 @@ export default function Menu(props: MenuProps) {
                     : styles.menu_container_closed
             }`}
         >
-            <div onClick={handleClick} className={styles.menu_title_container}>
+            <div
+                onClick={handleClickMenu}
+                className={`${
+                    showMenu && styles.menu_title_container_selected
+                } ${styles.menu_title_container}`}
+            >
                 <div className={styles.icon_and_description}>
                     <div className={styles.menu_title_icon}>
                         {props.menuItem.icon}
@@ -66,14 +73,13 @@ export default function Menu(props: MenuProps) {
                                 : styles.arrow_closed
                         }`}
                     >
-                        <IoIosArrowDown />
+                        <MdOutlineKeyboardArrowRight size={20} />
                     </div>
                 )}
             </div>
 
             {props.menuItem.submenu ? (
-                <ul
-                    className={`${styles.menu_item} ${
+                <ul className={`${styles.menu_item} ${
                         showMenu
                             ? styles.menu_item_expanded
                             : styles.menu_item_closed

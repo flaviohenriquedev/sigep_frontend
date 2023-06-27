@@ -1,27 +1,31 @@
-'use client';
+"use client";
 
-import { createContext, useState  } from "react";
+import { createContext, useCallback, useState } from "react";
 
 type SideBarContextProps = {
     sidebarExpanded: boolean;
     setSidebarExpanded: (value: boolean) => void;
-}
+};
 
 export const SideBarContext = createContext<SideBarContextProps>({
     sidebarExpanded: true,
     setSidebarExpanded: () => {},
-})
+});
 
-export const SideBarContextProvider = ({children} : {children: React.ReactNode}) => {
-
+export const SideBarContextProvider = ({
+    children,
+}: {
+    children: React.ReactNode;
+}) => {
     const [sidebarExpanded, setSidebarExpanded] = useState(false);
-
     return (
-        <SideBarContext.Provider value={{
-            sidebarExpanded,
-            setSidebarExpanded,
-        }}>
+        <SideBarContext.Provider
+            value={{
+                sidebarExpanded,
+                setSidebarExpanded,
+            }}
+        >
             {children}
         </SideBarContext.Provider>
-    )
-}
+    );
+};
