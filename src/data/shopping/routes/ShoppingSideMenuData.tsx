@@ -183,14 +183,14 @@ export const ShoppingSideMenuData: MenuItem[] = [
                 submenu: [
                     {
                         description:
-                            "2.01 - Entrada de Produtos / Serviços (OS / OF)",
-                        pageName: "Entrada de Produtos / Serviços (OS / OF)",
+                            "2.01 - Entrada de Produto / Serviço (OS / OF)",
+                        pageName: "Entrada de Produto  / Serviço (OS / OF)",
                     },
                     {
                         description:
-                            "2.02 - Entrada de Produtos / Serviços (OS / OF) Parcial",
+                            "2.02 - Entrada de Produto / Serviço (OS / OF) Parcial",
                         pageName:
-                            "Entrada de Produtos / Serviços (OS / OF) Parcial",
+                            "Entrada de Produto / Serviço (OS / OF) Parcial",
                     },
                     {
                         description: "2.03 - Entrada de Produtos / Serviços",

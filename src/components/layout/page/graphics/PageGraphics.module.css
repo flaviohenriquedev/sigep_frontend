@@ -6,7 +6,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     color: var(--letter-color-default);
     margin-left: 1rem;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     height: auto;
     transition: 0.3s ease;

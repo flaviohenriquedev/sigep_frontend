@@ -16,10 +16,7 @@ const PageContainer = (props: PageContainerProps) => {
         <div id="page_container"
             className={styles.pagelayout_container}>
 
-
-
             <PageHeader pageTittle={props.pageTittle} />
-            
             
             <div className={styles.sidebar_and_main}>
                 <PageSidebar data={props.menuItems} />

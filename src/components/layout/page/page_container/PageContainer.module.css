@@ -1,6 +1,6 @@
 .pagelayout_container {
     display: flex;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     height: auto;
     margin-top: var(--header-master-height);
@@ -10,11 +10,11 @@
     display: flex;
     margin-top: calc(var(--pageheader-height) + 1rem);
     position: relative;
+    width: inherit;
     min-height: inherit;
     height: inherit;
 }
 
 .main {
     height: auto;
-    background-color: blue;
 }
