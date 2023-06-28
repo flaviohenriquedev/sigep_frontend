@@ -1,4 +1,7 @@
 .submenu_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     font-size: 0.8rem;
     margin: 0.5rem 0 0.2rem 1.5rem;
 }
@@ -9,7 +12,6 @@
     align-items: center;
     padding-right: 1rem;
     height: 1.5rem;
-    
 }
 
 .submenu:hover {
@@ -33,9 +35,6 @@
     transform: scale(0.50); 
 }
 
-.submenu_description {
-    
-}
 
 .arrow_closed {
     transform: rotate(-180deg);

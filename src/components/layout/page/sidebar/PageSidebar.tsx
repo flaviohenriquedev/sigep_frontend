@@ -72,7 +72,7 @@ const PageSidebar = (props: PageSidebarProps) => {
 
     return (
         <aside
-            className={`${
+            className={`${styles.pagesidebar_container} ${
                 sidebarExpanded
                     ? styles.pagesidebar_container_expanded
                     : styles.pagesidebar_container_close
@@ -108,11 +108,7 @@ const PageSidebar = (props: PageSidebarProps) => {
                     </div>
                 </div>
             </div>
-            <div className={styles.pagesidebar_items}>
-                <ul className={styles.pagesidebar_items_list}>
-                    {renderMenu(filteredData)}
-                </ul>
-            </div>
+            <ul style={{marginBottom: '5rem'}}>{renderMenu(filteredData)}</ul>
         </aside>
     );
 };

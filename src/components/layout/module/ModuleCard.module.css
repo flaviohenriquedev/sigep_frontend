@@ -3,4 +3,6 @@
     grid-template-columns: repeat(4, 1fr);
     padding: 2rem;
     gap: 2rem;
+    background-color: coral;
+    margin-top: var(--header-master-height);
 }

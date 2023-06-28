@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     position: fixed;
-    padding-left: 1%;
+    padding: 0 0.5rem 0;
     background-color: var(--secondary-color);
-    width: 100%;
+    width: 100vw;
     height: var(--pageheader-height);
     color: white;
     z-index: 1;

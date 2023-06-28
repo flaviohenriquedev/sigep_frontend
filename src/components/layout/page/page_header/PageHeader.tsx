@@ -14,14 +14,13 @@ const PageHeader = ({ pageTittle }: { pageTittle: string }) => {
 
     return (
         <header className={styles.pageheader_container}>
-            <div style={{display: "flex", justifyContent: "space-between", width: "100%"}}>
+            <div style={{display: "flex", justifyContent: "space-between", width: 'inherit'}}>
                 <h2>{pageTittle}</h2>
-                <div style={{display: "flex", gap: "1rem"}}>
+                <div style={{display: "flex", justifyContent: 'flex-end',gap: "1rem"}}>
                     <Select options={instituitions} />
                     <Input className="date" type="date"/>
                 </div>
             </div>
-
         </header>
     )
 }

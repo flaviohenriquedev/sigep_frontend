@@ -7,10 +7,8 @@ export default function ShoppingLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div>
-            <PageContainer pageTittle="Compras" menuItems={ShoppingSideMenuData}>
-                {children}
-            </PageContainer>
-        </div>
+        <PageContainer pageTittle="Compras" menuItems={ShoppingSideMenuData}>
+            {children}
+        </PageContainer>
     );
 }

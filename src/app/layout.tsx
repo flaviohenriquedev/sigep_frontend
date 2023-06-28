@@ -22,7 +22,7 @@ export default function RootLayout({
             <body>
                 <SideBarContextProvider>
                     <Header />
-                    <div id="main">{children}</div>
+                    {children}
                 </SideBarContextProvider>
             </body>
         </html>

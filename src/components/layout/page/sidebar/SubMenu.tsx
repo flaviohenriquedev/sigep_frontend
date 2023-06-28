@@ -47,7 +47,6 @@ export default function Item(props: Props) {
                 </div>
                 <div>
                     <div
-                        className={styles.submenu_description}
                         style={{
                             fontWeight: props.children ? "bold" : "normal",
                         }}

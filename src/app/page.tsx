@@ -1,9 +1,5 @@
 import ModuleCard from "@/components/layout/module/ModuleCard";
 
 export default function Home() {
-    return (
-        <div>
-            <ModuleCard />
-        </div>
-    )
+    return <ModuleCard />;
 }

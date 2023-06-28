@@ -13,8 +13,14 @@ type PageContainerProps = {
 
 const PageContainer = (props: PageContainerProps) => {
     return (
-        <div className={styles.pagelayout_container}>
+        <div id="page_container"
+            className={styles.pagelayout_container}>
+
+
+
             <PageHeader pageTittle={props.pageTittle} />
+            
+            
             <div className={styles.sidebar_and_main}>
                 <PageSidebar data={props.menuItems} />
                 {props.children}

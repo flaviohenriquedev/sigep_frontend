@@ -1,35 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
-:root{
-    --header-gradient: linear-gradient(24deg, rgba(29,53,87,1) 0%, rgba(24,68,130,1) 100%);
-    --background-color: #E5E4E2;
-    --primary-color: #1D3557;
-    --secondary-color: #457B9D;
-    --tertiary-color: #A8DADC;
-
-    --elements-color: #FFFF;
+:root {
+    --header-gradient: linear-gradient(
+        24deg,
+        rgba(29, 53, 87, 1) 0%,
+        rgba(24, 68, 130, 1) 100%
+    );
+    --background-color: #e5e4e2;
+    --primary-color: #1d3557;
+    --secondary-color: #457b9d;
+    --tertiary-color: #a8dadc;
+    --pagesidebar-fontcolor: #757575;
+    --pagesidebar-fontcolor-hover: #000000;
+    --elements-color: #ffff;
     --elements-border: #f2f3f4;
-
     --letter-color-default: #353839;
 
+    --header-master-height: 4rem;
     --input-outline: none;
-    --input-height: 30px;
-    --input-border-radius: 2px;
-
-    --layout-border-radius: 4px;
-
-    --pageheader-height: 40px;
+    --input-height: 2rem;
+    --input-border-radius: 0.5rem;
+    --layout-border-radius: 0.5rem;
+    --pageheader-height: 3rem;
     --pagesidebar-closed: 5rem;
-    --pagesidebar-expanded: 30rem;
-    --pagesidebar-fontcolor: #757575;
-    --pagesidebar-fontcolor-hover: #000000; 
-    --pagemain-marginsidebar: 1%;
-    --pagemain-marginheader: 0.5%;
+    --pagesidebar-expanded: 20rem;
 }
 
 * {
-    font-family: 'Inter', sans-serif;
-
+    font-family: "Inter", sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -55,10 +53,17 @@ body {
     background: var(--background-color);
 }
 
-#main {
-    margin-top: 4rem;
-}
-
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
+ 
+ body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+ }
 .input_label {
     display: flex;
     flex-direction: column;
