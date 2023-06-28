@@ -16,14 +16,17 @@
     --elements-border: #f2f3f4;
     --letter-color-default: #353839;
 
-    --header-master-height: 4rem;
+    --header-master-height: 3.5rem;
     --input-outline: none;
-    --input-height: 2rem;
+    --input-height: 1.7rem;
     --input-border-radius: 0.5rem;
     --layout-border-radius: 0.5rem;
-    --pageheader-height: 3rem;
+    --pageheader-height: 2.5rem;
     --pagesidebar-closed: 5rem;
     --pagesidebar-expanded: 32rem;
+    --pagesidebar-min-height: 2.3rem;
+
+    --font-weight-menu: 500;
 }
 
 * {
@@ -57,14 +60,10 @@ html {
     margin: 0px;
     height: 100%;
     width: 100%;
- }
- 
- body {
+}
+
+body {
     margin: 0px;
     min-height: 100%;
     width: 100%;
- }
-.input_label {
-    display: flex;
-    flex-direction: column;
 }

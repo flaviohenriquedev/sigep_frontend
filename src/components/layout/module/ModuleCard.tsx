@@ -6,13 +6,13 @@ export default function Menu() {
 
     const modules = [
         {
-            title: 'Compras',
-            icon: <IconCalendarDollar size={60} stroke={1}/>,
+            title: 'COMPRAS',
+            icon: <IconCalendarDollar size={50} stroke={1}/>,
             href: "/manager/shopping"
         },
         {
-            title: 'Frotas',
-            icon: <IconCar size={60} stroke={1}/>,
+            title: 'FROTAS',
+            icon: <IconCar size={50} stroke={1}/>,
             href: "/manager/fleet"
         },
     ]

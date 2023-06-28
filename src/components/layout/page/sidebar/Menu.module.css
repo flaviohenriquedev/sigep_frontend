@@ -2,9 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 2.5rem;
     color: var(--pagesidebar-fontcolor);
-    font-weight: 500;
+    font-weight: var(--font-weight-menu);
 }
 
 .menu_container_expanded {
@@ -19,7 +18,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 40px;
+    height: 30px;
     transition: 0.1s all;
     position: relative;
     z-index: 0;
@@ -36,7 +35,7 @@
 }
 .menu_container_expanded .menu_title_container_selected {
     color: var(--pagesidebar-fontcolor-hover);
-    border-left: 0.3rem solid var(--tertiary-color)
+    border-left: 0.3rem solid orangered
 }
 
 .menu_container_expanded .menu_title_container {
@@ -106,6 +105,11 @@
     border-top-right-radius: var(--layout-border-radius);
     border-bottom: 0.5px solid var(--elements-border);
     color: var(--pagesidebar-fontcolor-hover);
+    font-size: 10pt;
+}
+
+.menu_title_description {
+    font-size: 10pt;
 }
 
 .menu_container_expanded .menu_title_description {

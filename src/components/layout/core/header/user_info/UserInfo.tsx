@@ -1,4 +1,3 @@
-import styles from './UserInfo.module.css'
 import Avatar from "@/components/layout/core/header/user_info/avatar/Avatar";
 
 

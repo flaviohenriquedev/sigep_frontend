@@ -17,6 +17,12 @@
     width: var(--pagesidebar-closed);
 }
 
+.pagesidebar_menu_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .toggle_sidebar {
     display: flex;
     align-items: center;

@@ -5,7 +5,7 @@ import { LuNewspaper } from "react-icons/lu";
 import { MdOutlineRequestPage, MdOutlineWarehouse } from "react-icons/md";
 import { MenuItem } from "../../../@types/shopping/ShoppingTypes";
 
-const iconSize: number | string = "1.3rem";
+const iconSize: number | string = "1.2rem";
 
 export const ShoppingSideMenuData: MenuItem[] = [
     {

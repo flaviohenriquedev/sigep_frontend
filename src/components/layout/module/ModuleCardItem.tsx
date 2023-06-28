@@ -24,7 +24,7 @@ export default function MenuItem(props: MenuItemProps) {
                     {props.children}
                 </div>
                 <div id="menu_item_text" className={styles.text}>
-                    <h4>{props.title}</h4>
+                    <h5>{props.title}</h5>
                 </div>
             </div>
         </div>

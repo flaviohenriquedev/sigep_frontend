@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    font-size: 10pt;
-    margin: 0.5rem 0 0.2rem 1rem;
+    font-size: 9pt;
+    margin: 0.3rem 0 0.3rem 1rem;
 }
 
 .submenu {
