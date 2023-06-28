@@ -45,14 +45,12 @@ export default function Item(props: Props) {
                         <BiLastPage size={15} />
                     )}
                 </div>
-                <div>
-                    <div
-                        style={{
-                            fontWeight: props.children ? "bold" : "normal",
-                        }}
-                    >
-                        {props.data.description}
-                    </div>
+                <div className={styles.submenu_description}
+                    style={{
+                        fontWeight: props.children ? "bold" : "normal",
+                    }}
+                >
+                    {props.data.description}
                 </div>
             </div>
             {props.children ? <ul style={style}>{props.children}</ul> : null}

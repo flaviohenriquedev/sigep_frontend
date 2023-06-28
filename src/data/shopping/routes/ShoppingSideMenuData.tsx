@@ -240,45 +240,40 @@ export const ShoppingSideMenuData: MenuItem[] = [
             },
         ],
     },
-    // {
-    //     icon: <BiPurchaseTag size={iconSize} />,
-    //     description: "Relatório",
-    //     pageName: "Relatório",
-    //     href: "manager/shopping/order_supply",
-    // },
-    // {
-    //     icon: <BiPurchaseTag size={iconSize} />,
-    //     description: "Configurações",
-    //     pageName: "Configurações",
-    //     href: "manager/shopping/order_supply",
-    // },
-    // {
-    //     icon: <BiPurchaseTag size={iconSize} />,
-    //     description: "Entidades",
-    //     pageName: "Entidades",
-    //     href: "manager/shopping/order_supply",
-    // },
-    // {
-    //     icon: <BiPurchaseTag size={iconSize} />,
-    //     description: "Fornecedor",
-    //     pageName: "Fornecedor",
-    //     href: "manager/shopping/order_supply",
-    // },
-    // {
-    //     icon: <BiPurchaseTag size={iconSize} />,
-    //     description: "Documentos",
-    //     pageName: "Documentos",
-    //     href: "manager/shopping/order_supply",
-    // },
-    // {
-    //     icon: <BiPurchaseTag size={iconSize} />,
-    //     description: "Usuário",
-    //     pageName: "Usuário",
-    //     href: "manager/shopping/order_supply",
-    // },
-    // {
-    //     icon: < BiPurchaseTag size={iconSize}/>,
-    //     description: "Teste",
-    //     pageName: "Teste",
-    // }
+    {
+        icon: <BiPurchaseTag size={iconSize} />,
+        description: "Relatório",
+        pageName: "Relatório",
+        href: "manager/shopping/order_supply",
+    },
+    {
+        icon: <BiPurchaseTag size={iconSize} />,
+        description: "Configurações",
+        pageName: "Configurações",
+        href: "manager/shopping/order_supply",
+    },
+    {
+        icon: <BiPurchaseTag size={iconSize} />,
+        description: "Entidades",
+        pageName: "Entidades",
+        href: "manager/shopping/order_supply",
+    },
+    {
+        icon: <BiPurchaseTag size={iconSize} />,
+        description: "Fornecedor",
+        pageName: "Fornecedor",
+        href: "manager/shopping/order_supply",
+    },
+    {
+        icon: <BiPurchaseTag size={iconSize} />,
+        description: "Documentos",
+        pageName: "Documentos",
+        href: "manager/shopping/order_supply",
+    },
+    {
+        icon: <BiPurchaseTag size={iconSize} />,
+        description: "Usuário",
+        pageName: "Usuário",
+        href: "manager/shopping/order_supply",
+    },
 ];

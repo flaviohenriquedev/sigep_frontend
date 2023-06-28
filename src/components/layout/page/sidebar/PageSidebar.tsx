@@ -1,14 +1,14 @@
 "use client";
 
-import { useContext, useEffect, useState } from "react";
+import {useContext, useEffect, useState} from "react";
 
-import { SideBarContext } from "@/context/layout/SideBarContext";
+import {SideBarContext} from "@/context/layout/SideBarContext";
 
 import Input from "@/components/layout/core/input/Input";
 
-import { MenuItem } from "../../../../@types/shopping/ShoppingTypes";
+import {MenuItem} from "../../../../@types/shopping/ShoppingTypes";
 
-import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
+import {RiMenuFoldLine, RiMenuUnfoldLine} from "react-icons/ri";
 import Menu from "./Menu";
 import styles from "./PageSidebar.module.css";
 
@@ -17,14 +17,14 @@ type PageSidebarProps = {
 };
 
 const PageSidebar = (props: PageSidebarProps) => {
-    const { sidebarExpanded, setSidebarExpanded } = useContext(SideBarContext);
+    const {sidebarExpanded, setSidebarExpanded} = useContext(SideBarContext);
 
     const [searchMenu, setSearchMenu] = useState("");
     const [filteredData, setFilteredData] = useState<MenuItem[]>(props.data);
 
     function renderMenu(data: MenuItem[]) {
         return data.map((m, i) => {
-            return <Menu menuItem={m} key={i} />;
+            return <Menu menuItem={m} key={i}/>;
         });
     }
 
@@ -34,7 +34,7 @@ const PageSidebar = (props: PageSidebarProps) => {
 
             if (props.data) {
                 props.data.forEach((d) => {
-                    const filteredMenu: MenuItem = { ...d };
+                    const filteredMenu: MenuItem = {...d};
                     if (
                         d.description
                             .toLowerCase()
@@ -99,9 +99,9 @@ const PageSidebar = (props: PageSidebarProps) => {
                         onClick={() => setSidebarExpanded(!sidebarExpanded)}
                     >
                         {sidebarExpanded ? (
-                            <RiMenuFoldLine size={20} enableBackground={0} />
+                            <RiMenuFoldLine size={20} enableBackground={0}/>
                         ) : (
-                            <RiMenuUnfoldLine size={20} enableBackground={0} />
+                            <RiMenuUnfoldLine size={20} enableBackground={0}/>
                         )}
                     </div>
                 </div>
