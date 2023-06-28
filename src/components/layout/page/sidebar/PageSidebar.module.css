@@ -31,7 +31,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
+    width: 2rem;
 }
 
 .toggle_sidebar_icon {
@@ -52,10 +52,16 @@
 
 .pagesidebar_search_menu {
     width: 100%;
+    transition: 0.3s ease;
+    opacity: 1;
+    visibility: visible;
 }
 
 .pagesidebar_search_menu_hidden {
-    display: none;
+    width: 0%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
 }
 
 .pagesidebar_top_hidden {

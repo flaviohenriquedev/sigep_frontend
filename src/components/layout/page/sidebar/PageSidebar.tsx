@@ -88,7 +88,7 @@ const PageSidebar = (props: PageSidebarProps) => {
                         className="text"
                         type="text"
                         placeholder="Buscar Menu"
-                        width="20rem"
+                        width="auto"
                         value={searchMenu}
                         onChange={setSearchMenu}
                     />
