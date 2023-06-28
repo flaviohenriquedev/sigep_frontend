@@ -43,7 +43,6 @@
     background-color: var(--elements-color);
     padding: 0.3rem;
     border-radius: 25%;
-    border: inset  1px solid var(--tertiary-color);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
