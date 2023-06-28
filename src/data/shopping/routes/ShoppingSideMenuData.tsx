@@ -4,6 +4,7 @@ import { FaFileContract, FaSortAmountUp } from "react-icons/fa";
 import { LuNewspaper } from "react-icons/lu";
 import { MdOutlineRequestPage, MdOutlineWarehouse } from "react-icons/md";
 import { MenuItem } from "../../../@types/shopping/ShoppingTypes";
+import { FaRegHandshake }from 'react-icons/fa'
 
 const iconSize: number | string = "1.2rem";
 
@@ -69,56 +70,52 @@ export const ShoppingSideMenuData: MenuItem[] = [
     },
     {
         icon: <FaFileContract size={iconSize} />,
-        description: "Licitação / Contratos",
-        pageName: "Licitação / Contratos",
+        description: "Licitação",
+        pageName: "Licitação",
         submenu: [
             {
-                description: "01 - Licitação",
-                pageName: 'Licitação',
-                submenu: [
-                    {
-                        description: "1.01 - Adesão Registro de Preço",
-                        pageName: "Adesão Registro de Preço",
-                    },
-                    {
-                        description: "1.02 - Dispensa Licitação",
-                        pageName: "Dispensa Licitação",
-                        href: 'manager/shopping/register/dispensation_bidding'
-                    },
-                    {
-                        description: "1.03 - Licitação",
-                        pageName: "Licitação",
-                        href: 'manager/shopping/register/bidding'
-                    },
-                ],
+                description: "1 - Adesão Registro de Preço",
+                pageName: "Adesão Registro de Preço",
             },
             {
-                description: "02 - Contrato",
-                pageName: 'Contrato',
-                submenu: [
-                    {
-                        description: "2.01 - Contrato",
-                        pageName: "Contrato",
-                    },
-                    {
-                        description: "2.02 - Aditivo",
-                        pageName: "Aditivo",
-                    },
-                    {
-                        description: "2.03 - Rescisão",
-                        pageName: "Rescisão",
-                    },
-                ],
+                description: "2 - Dispensa Licitação",
+                pageName: "Dispensa Licitação",
+                href: 'manager/shopping/register/dispensation_bidding'
             },
             {
-                description: "03 - Decreto Regulamentador",
+                description: "3 - Licitação",
+                pageName: "Licitação",
+                href: 'manager/shopping/register/bidding'
+            },
+           
+            {
+                description: "04 - Decreto Regulamentador",
                 pageName: "Decreto Regulamentador",
             },
             {
-                description: "04 - Consolidação Saldo Licitação",
+                description: "05 - Consolidação Saldo Licitação",
                 pageName: "Consolidação Saldo Licitação",
             },
         ],
+    },
+    {
+        icon: <FaRegHandshake size={iconSize} />,
+        description: 'Contrato',
+        pageName: 'Contrato',
+        submenu: [
+            {
+                description: "1 - Contrato",
+                pageName: "Contrato",
+            },
+            {
+                description: "2 - Aditivo",
+                pageName: "Aditivo",
+            },
+            {
+                description: "3 - Rescisão",
+                pageName: "Rescisão",
+            },
+        ]
     },
     {
         icon: <MdOutlineRequestPage size={iconSize} />,
