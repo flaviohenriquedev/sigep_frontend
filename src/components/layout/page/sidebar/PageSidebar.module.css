@@ -1,24 +1,19 @@
 .pagesidebar_container {
     display: flex;
     flex-direction: column;
-    background-color: blueviolet;
     background-color: var(--elements-color);
     border: 1px solid var(--elements-border);
     border-top-right-radius: var(--layout-border-radius);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     position: relative;
-}   
-
-.pagesidebar_container_expanded {
-    min-width: var(--pagesidebar-expanded);
-    width: auto;
     transition: 0.3s ease;
 }
 
-.pagesidebar_container_close {
+.pagesidebar_container_expanded {
+    width: var(--pagesidebar-expanded);
+}
+.pagesidebar_container_closed {
     width: var(--pagesidebar-closed);
-    border-top-right-radius: var(--layout-border-radius);
-    transition: 0.3s ease;
 }
 
 .toggle_sidebar {
