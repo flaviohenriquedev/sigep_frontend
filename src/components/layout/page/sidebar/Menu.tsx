@@ -1,7 +1,7 @@
 "use client";
 
 import { SideBarContext } from "@/context/layout/SideBarContext";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useMemo } from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import {
     MenuItem,
@@ -16,15 +16,10 @@ type MenuProps = {
 };
 
 export default function Menu(props: MenuProps) {
-    const { sidebarExpanded } = useContext(SideBarContext);
-    const [showMenu, setShowMenu] = useState<boolean>(false);
+    const { sidebarExpanded, expandedOrCollapsed, toggleExpandedOrCollapsed } =
+        useContext(SideBarContext);
+    const [showMenu, setShowMenu] = useState<boolean | null>(false);
     const [menuSelected, setMenuSelected] = useState(false);
-
-    useEffect(() => {
-        if (!sidebarExpanded && showMenu) {
-            setShowMenu(false);
-        }
-    }, [sidebarExpanded, showMenu]);
 
     function renderSubMenu(data: SubMenuItem[]) {
         return data.map((sub, i) => {
@@ -36,10 +31,23 @@ export default function Menu(props: MenuProps) {
         });
     }
 
+    useMemo(() => {
+        if (expandedOrCollapsed !== null) {
+            setShowMenu(expandedOrCollapsed);
+        }
+    }, [expandedOrCollapsed]);
+
+    useEffect(() => {
+        if (!sidebarExpanded && showMenu) {
+            setShowMenu(false);
+        }
+    }, [sidebarExpanded, showMenu]);
+
     function handleClickMenu() {
         if (sidebarExpanded) {
             setMenuSelected(!menuSelected);
             setShowMenu(!showMenu);
+            toggleExpandedOrCollapsed(null);
         }
     }
 
@@ -79,7 +87,8 @@ export default function Menu(props: MenuProps) {
             </div>
 
             {props.menuItem.submenu ? (
-                <ul className={`${styles.menu_item} ${
+                <ul
+                    className={`${styles.menu_item} ${
                         showMenu
                             ? styles.menu_item_expanded
                             : styles.menu_item_closed

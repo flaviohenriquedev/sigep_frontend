@@ -1,0 +1,32 @@
+.tooltip_container {
+    display: inline-block;
+    position: relative;
+    
+}
+
+.tooltip_text {
+    display: flex;
+    position: absolute;
+    top: calc(-100% - 0.2rem);
+    background-color: rgba(0,0,0,0.8);
+    font-size: 8pt;
+    color: white;
+    border-radius: 0.2rem;
+    z-index: 1;
+    width: auto;
+    padding: 0.2rem 0.5rem;
+    white-space: nowrap;
+}
+
+
+.tooltip_text_open {
+    visibility: visible;
+    transition: 0.2s ease;
+    transition-delay: 1s;
+}
+
+
+.tooltip_text_closed {
+    visibility: hidden;
+    transition: 0.2s ease;
+}

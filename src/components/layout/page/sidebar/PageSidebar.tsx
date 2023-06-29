@@ -1,6 +1,8 @@
 "use client";
 
 import { useContext, useEffect, useState } from "react";
+import { LuListStart } from "react-icons/lu";
+import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
 
 import { SideBarContext } from "@/context/layout/SideBarContext";
 
@@ -8,16 +10,17 @@ import Input from "@/components/layout/core/input/Input";
 
 import { MenuItem } from "../../../../@types/shopping/ShoppingTypes";
 
-import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
 import Menu from "./Menu";
 import styles from "./PageSidebar.module.css";
+import Tooltip from "@/components/common/tooltip/Tooltip";
 
 type PageSidebarProps = {
     data: MenuItem[];
 };
 
 const PageSidebar = (props: PageSidebarProps) => {
-    const { sidebarExpanded, setSidebarExpanded } = useContext(SideBarContext);
+    const { sidebarExpanded, setSidebarExpanded, toggleExpandedOrCollapsed } =
+        useContext(SideBarContext);
 
     const [searchMenu, setSearchMenu] = useState("");
     const [filteredData, setFilteredData] = useState<MenuItem[]>(props.data);
@@ -26,6 +29,11 @@ const PageSidebar = (props: PageSidebarProps) => {
         return data.map((m, i) => {
             return <Menu menuItem={m} key={i} />;
         });
+    }
+
+    function toggleSidebarState() {
+        setSidebarExpanded(!sidebarExpanded);
+        toggleExpandedOrCollapsed(null);
     }
 
     useEffect(() => {
@@ -98,7 +106,7 @@ const PageSidebar = (props: PageSidebarProps) => {
                 <div className={styles.toggle_sidebar_icon_container}>
                     <div
                         className={styles.toggle_sidebar_icon}
-                        onClick={() => setSidebarExpanded(!sidebarExpanded)}
+                        onClick={toggleSidebarState}
                     >
                         {sidebarExpanded ? (
                             <RiMenuFoldLine size={16} enableBackground={0} />
@@ -107,6 +115,36 @@ const PageSidebar = (props: PageSidebarProps) => {
                         )}
                     </div>
                 </div>
+            </div>
+
+            <div
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: sidebarExpanded ? "flex-end" : "center",
+                    gap: "0.5rem",
+                    paddingRight: sidebarExpanded ? "0.5rem" : "",
+                    height: "1.5rem",
+                    marginBottom: "1rem",
+                }}
+            >
+                <Tooltip text="Expandir todos">
+                    <button
+                        className={`${styles.btn_expand}`}
+                        onClick={() => toggleExpandedOrCollapsed(true)}
+                    >
+                        <LuListStart />
+                    </button>
+                </Tooltip>
+
+                <Tooltip text="Fechar todos">
+                    <button
+                        className={styles.btn_collapse}
+                        onClick={() => toggleExpandedOrCollapsed(false)}
+                    >
+                        <LuListStart />
+                    </button>
+                </Tooltip>
             </div>
 
             <ul className={styles.pagesidebar_menu_list}>

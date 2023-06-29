@@ -62,8 +62,7 @@ html {
     width: 100%;
 }
 
-body {
-    margin: 0px;
-    min-height: 100%;
-    width: 100%;
+button {
+    border: none;
+    background-color: transparent;
 }

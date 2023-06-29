@@ -75,3 +75,33 @@
     display: flex;
     justify-content: space-between;
 }
+
+.btn_collapse,
+.btn_expand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 25%;
+    color: var(--pagesidebar-fontcolor);
+    opacity: 1;
+    transition: 0.3s ease;  
+}
+
+.btn_expand:hover,
+.btn_collapse:hover {
+    box-shadow: rgba(0, 0, 0, 1) 0px 0px 2px;
+    cursor: pointer;
+}
+
+.btn_expand:active,
+.btn_collapse:active {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+}
+
+.btn_expand {
+    transform: rotate(180deg);
+}

@@ -1,10 +1,6 @@
 import Header from "@/components/layout/core/header/Header";
 import { SideBarContextProvider } from "@/context/layout/SideBarContext";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
 import "./globals.css";
-
-config.autoAddCss = false;
 
 export const metadata = {
     title: "SIGEP",
