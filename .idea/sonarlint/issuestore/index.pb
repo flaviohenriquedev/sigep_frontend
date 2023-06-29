@@ -1,24 +1,16 @@
 
-`
-0src/app/manager/shopping/bidding/page.module.css,b\5\b5bd8606ff1d4042fa90dbffeb6a09fdc003b173
 G
 src/app/page.module.css,7\8\78b82cc5d1639d4541dbfbd03c2f96784e923da6
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
 X
 (src/app/manager/shopping/page.module.css,e\0\e0f09f6ecf5f7fa13b345fbd394d7645bc8e5951
-g
-7src/components/layout/page/header/PageHeader.module.css,f\8\f8f4b5953022dacb2a15d23205c60b8933e9c7ef
-`
-0src/components/layout/page/header/PageHeader.tsx,d\9\d952cfdecd5e20f845d6de4074e93faba8b3a01a
 h
 8src/components/layout/core/header/user_info/UserInfo.tsx,b\d\bda0a8aececc5f4db7d1cdc37a410d299911bccd
 l
 <src/components/layout/core/header/home_button/HomeButton.tsx,5\0\50a721704d2174d0255eef626a54ff4a0997d63f
 \
 ,src/components/layout/core/select/Select.tsx,8\7\87a88d4c9f69865ff907264a0567b662df24d13a
-W
-'src/components/layout/menu/MenuItem.tsx,7\a\7a843e681b2f503027fa92215d9db22d02d4b3e8
 a
 1src/components/layout/core/input/Input.module.css,a\a\aaf16b44f72ed74635e03d5bf2a005fa2ecaacd0
 \
@@ -27,8 +19,6 @@ Z
 *src/components/layout/core/input/Input.tsx,c\2\c20453e2c73bcd27a8b31390512d2b79de423b09
 B
 src/app/layout.tsx,c\f\cfb47de6ae0cae626eed46461300112ef521d977
-`
-0src/components/layout/page/PageLayout.module.css,d\d\dd801f89114d4d7dc8f3d656bd808f52a1d50bf5
 c
 3src/components/layout/page/main/PageMain.module.css,8\9\892d5aadf0f84420b6ac6c2759d4d72c7d8281ae
 i
@@ -39,8 +29,6 @@ C
 src/app/globals.css,d\a\da1d6f21d01d0f36b5501dffcf7fd160ffcb290d
 [
 +src/app/manager/shopping/construct/page.tsx,1\1\11fdb53a07e6b7104837316842b12cf6293655fc
-b
-2src/app/manager/shopping/request_purchase/page.tsx,0\8\08f7c506abd042115775dd3a43947d3bebd8f75b
 @
 src/app/page.tsx,3\3\3393394e21dbac7686e91ad17c5283fb052d67f3
 Q

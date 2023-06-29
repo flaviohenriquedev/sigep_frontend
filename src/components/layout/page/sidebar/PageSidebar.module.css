@@ -32,25 +32,21 @@
     height: 3rem;
     margin-bottom: 0.5rem;
     padding-right: 0.5rem;
-}
-
-.toggle_sidebar_icon_container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 2rem;
+    position: relative;
 }
 
 .toggle_sidebar_icon {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     color: var(--pagesidebar-fontcolor);
     transition: 0.1s all;
     background-color: var(--elements-color);
     padding: 0.3rem;
-    border-radius: 25%;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 2px 1.5px;
+    position: absolute;
+    right: 0;
+    transform: translateX(50%);
 }
 
 .toggle_sidebar_icon:hover {

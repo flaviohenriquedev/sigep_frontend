@@ -103,17 +103,15 @@ const PageSidebar = (props: PageSidebarProps) => {
                         onChange={setSearchMenu}
                     />
                 </div>
-                <div className={styles.toggle_sidebar_icon_container}>
-                    <div
-                        className={styles.toggle_sidebar_icon}
-                        onClick={toggleSidebarState}
-                    >
-                        {sidebarExpanded ? (
-                            <RiMenuFoldLine size={16} enableBackground={0} />
-                        ) : (
-                            <RiMenuUnfoldLine size={16} enableBackground={0} />
-                        )}
-                    </div>
+                <div
+                    className={styles.toggle_sidebar_icon}
+                    onClick={toggleSidebarState}
+                >
+                    {sidebarExpanded ? (
+                        <RiMenuFoldLine size={16} enableBackground={0} />
+                    ) : (
+                        <RiMenuUnfoldLine size={16} enableBackground={0} />
+                    )}
                 </div>
             </div>
 
@@ -123,7 +121,7 @@ const PageSidebar = (props: PageSidebarProps) => {
                     alignItems: "center",
                     justifyContent: sidebarExpanded ? "flex-end" : "center",
                     gap: "0.5rem",
-                    paddingRight: sidebarExpanded ? "0.5rem" : "",
+                    paddingRight: sidebarExpanded ? "1.2rem" : "",
                     height: "1.5rem",
                     marginBottom: "1rem",
                 }}
