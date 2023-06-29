@@ -1,18 +1,50 @@
 import ModuleCardItem from "@/components/layout/module/ModuleCardItem";
-import { IconCalendarDollar, IconCar } from "@tabler/icons-react";
+import { BiPurchaseTag } from "react-icons/bi";
+import { BsFileEarmarkPerson, BsCarFront } from 'react-icons/bs'
+import { RiMoneyDollarCircleLine } from 'react-icons/ri'
+import { HiOutlineClipboardDocumentList } from 'react-icons/hi2'
+import { TbFileInvoice } from 'react-icons/tb'
 import styles from './ModuleCard.module.css';
 
 export default function Menu() {
 
+    const iconSize: string | number = '90px'
+
     const modules = [
         {
             title: 'COMPRAS',
-            icon: <IconCalendarDollar size={50} stroke={1}/>,
+            icon: <BiPurchaseTag  size={iconSize} />,
+            info: 'Aqui vão informações referentes a esse módulo, ou talvez os favoritos',
             href: "/manager/shopping"
         },
         {
             title: 'FROTAS',
-            icon: <IconCar size={50} stroke={1}/>,
+            icon: <BsCarFront size={iconSize} />,
+            info: 'Aqui vão informações referentes a esse módulo, ou talvez os favoritos',
+            href: "/manager/fleet"
+        },
+        {
+            title: 'RECURSOS HUMANOS',
+            icon: <BsFileEarmarkPerson size={iconSize} />,
+            info: 'Aqui vão informações referentes a esse módulo, ou talvez os favoritos',
+            href: "/manager/fleet"
+        },
+        {
+            title: 'GESTÃO TRIBUTÁRIA',
+            icon: <RiMoneyDollarCircleLine size={iconSize} />,
+            info: 'Aqui vão informações referentes a esse módulo, ou talvez os favoritos',
+            href: "/manager/fleet"
+        },
+        {
+            title: 'PROTOCOLO',
+            icon: <HiOutlineClipboardDocumentList size={iconSize} />,
+            info: 'Aqui vão informações referentes a esse módulo, ou talvez os favoritos',
+            href: "/manager/fleet"
+        },
+        {
+            title: 'GESTÃO DE ISS',
+            icon: <TbFileInvoice size={iconSize} />,
+            info: 'Aqui vão informações referentes a esse módulo, ou talvez os favoritos',
             href: "/manager/fleet"
         },
     ]
@@ -23,7 +55,9 @@ export default function Menu() {
             return (
                     <ModuleCardItem key={index}
                               title={module.title}
-                              href={module.href}>
+                              href={module.href}
+                              info={module.info}
+                              >
                         {module.icon}
                     </ModuleCardItem>
             )

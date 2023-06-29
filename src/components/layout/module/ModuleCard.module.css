@@ -1,7 +1,7 @@
 .menu {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 2rem;
+    padding: 4rem;
     gap: 2rem;
     margin-top: var(--header-master-height);
 }

@@ -1,32 +1,36 @@
-'use client'
+"use client";
 
-import {useRouter} from 'next/navigation';
-import styles from './ModuleCardItem.module.css';
+import { useRouter } from "next/navigation";
+import styles from "./ModuleCardItem.module.css";
 
 type MenuItemProps = {
     title: string;
-    children: any;
+    children: JSX.Element;
     href: string;
+    info?: string;
 };
 
 export default function MenuItem(props: MenuItemProps) {
-
     const route = useRouter();
 
     return (
-        <div
-            id="menu_item_container"
-            className={styles.container}
-            onClick={() => route.push(props.href)}
-        >
-            <div id="menu_item_icon_and_text" className={styles.icon_and_text}>
-                <div id="menu_item_icon" className={styles.icon}>
-                    {props.children}
-                </div>
-                <div id="menu_item_text" className={styles.text}>
-                    <h5>{props.title}</h5>
+        <>
+            <div className={styles.container}>
+                {props.children}
+
+                <div
+                    className={styles.text_area}
+                    onClick={() => route.push(props.href)}
+                >
+                    <div className={styles.title}>
+                        <h1>{props.title}</h1>
+                    </div>
+                    <hr />
+                    <div className={styles.info}>
+                        <p>{props.info}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }

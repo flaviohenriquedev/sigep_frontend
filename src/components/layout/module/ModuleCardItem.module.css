@@ -1,54 +1,57 @@
 .container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 16rem;
-    height: 5rem;
-    background: rgba(255, 255, 255, 0.40);
-    border-radius: 5px;
-    box-shadow: 4px 5px 10px 4px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem;
-    transition: 0.1s all;
-    border-bottom: 5px solid transparent;
-    color: darkslategray;
-}
-
-.container:hover {
-    cursor: pointer;
-    border-bottom: 5px solid var(--secondary-color);
-    color: var(--secondary-color);
-    background: rgba(255, 255, 255, 0.60);
-}
-
-.container:hover > .icon_and_text .icon {
-    border-right: 1px solid var(--secondary-color);
-}
-
-.container:active {
-    transform: scale(0.95);
-}
-
-.icon_and_text {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 45%;
-    max-width: 45%;
-    height: 100%;
-    border-right: 1px solid darkslategray;
-}
-
-.text {
-    display: flex;
     justify-content: flex-start;
-    align-items: center;
-    padding-left: 1em;
-    width: 65%;
+    background-color: white;
+    width: 280px;
+    height: 130px;
+    border-radius: 20px;
+    position: relative;
+    background-color: var(--elements-color);
+    color: var(--pagesidebar-fontcolor);
+    box-shadow: -4px 4px 10px 1px  rgba(0, 0, 0, 0.3);
+    padding-left: 1rem;
+}
+
+.text_area {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
     height: 100%;
+    right: 0;
+    position: absolute;
+    border-radius: 15px 20px 20px 15px;
+    background: whitrgba(255, 255, 255, 0.20);
+    box-shadow: -15px 0 20px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(6.2px);
+    border: 1px solid rgb(255, 255, 255);
+    padding-left: 1rem;
+    transition: 0.3s all;
+}
+.container:hover {
+    transition: 0.2s all;
+    color: var(--secondary-color);
+}
+
+.text_area:hover {
+    cursor: pointer;
+    transition: 0.2s ease;
+    transform: scale(1.02);
+}
+
+
+/* From https://css.glass */
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: 9pt;
+    flex: 1;
+}
+
+.info {
+    font-size: 6pt;
+    flex: 1;
+    margin-top: 0.5rem;
 }
