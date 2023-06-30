@@ -2,7 +2,7 @@
 
 import { SubMenuItem } from "@/@types/shopping/ShoppingTypes";
 import { useRouter } from "next/navigation";
-import { CSSProperties, useState, useMemo, useContext } from "react";
+import { CSSProperties, useState, useEffect, useContext } from "react";
 import { BiLastPage } from "react-icons/bi";
 import { LuArrowDownWideNarrow } from "react-icons/lu";
 
@@ -34,7 +34,7 @@ export default function Item(props: Props) {
         }
     }
 
-    useMemo(() => {
+    useEffect(() => {
         if (expandedOrCollapsed !== null) {
             setShow(expandedOrCollapsed);
         }
