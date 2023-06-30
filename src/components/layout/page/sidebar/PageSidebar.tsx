@@ -37,6 +37,11 @@ const PageSidebar = (props: PageSidebarProps) => {
     }
 
     useEffect(() => {
+        if(searchMenu.length > 0) {
+            toggleExpandedOrCollapsed(true)
+        } else {
+            toggleExpandedOrCollapsed(false)
+        }
         const filterMenu = () => {
             const filteredMap: { [key: string]: MenuItem } = {};
 
