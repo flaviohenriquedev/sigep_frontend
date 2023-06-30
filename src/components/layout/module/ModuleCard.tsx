@@ -8,7 +8,7 @@ import styles from './ModuleCard.module.css';
 
 export default function Menu() {
 
-    const iconSize: string | number = '90px'
+    const iconSize: string | number = '70px'
 
     const modules = [
         {
@@ -21,31 +21,31 @@ export default function Menu() {
             title: 'FROTAS',
             icon: <BsCarFront size={iconSize} />,
             info: 'Aqui vão informações referentes a esse módulo, ou talvez os favoritos',
-            href: "/manager/fleet"
+            
         },
         {
             title: 'RECURSOS HUMANOS',
             icon: <BsFileEarmarkPerson size={iconSize} />,
             info: 'Aqui vão informações referentes a esse módulo, ou talvez os favoritos',
-            href: "/manager/fleet"
+            
         },
         {
             title: 'GESTÃO TRIBUTÁRIA',
             icon: <RiMoneyDollarCircleLine size={iconSize} />,
             info: 'Aqui vão informações referentes a esse módulo, ou talvez os favoritos',
-            href: "/manager/fleet"
+            
         },
         {
             title: 'PROTOCOLO',
             icon: <HiOutlineClipboardDocumentList size={iconSize} />,
             info: 'Aqui vão informações referentes a esse módulo, ou talvez os favoritos',
-            href: "/manager/fleet"
+            
         },
         {
             title: 'GESTÃO DE ISS',
             icon: <TbFileInvoice size={iconSize} />,
             info: 'Aqui vão informações referentes a esse módulo, ou talvez os favoritos',
-            href: "/manager/fleet"
+            
         },
     ]
 

@@ -17,6 +17,7 @@ const PageMain = (props: PageMainProps) => {
             <div className={styles.pagemain_info}>
                 <h3>{pn}</h3>
             </div>
+            
             <div className={styles.pagemain_children}>{props.children}</div>
         </div>
     );
