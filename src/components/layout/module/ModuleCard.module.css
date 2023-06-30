@@ -1,6 +1,6 @@
 .menu {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);    
     padding: 4rem;
     gap: 2rem;
     margin-top: var(--header-master-height);

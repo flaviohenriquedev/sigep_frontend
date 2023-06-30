@@ -1,90 +1,77 @@
-"use client";
+'use client'
 
-import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
-import styles from "./page.module.css";
+import { useState } from 'react';
+import BiddingPage from '../manager/shopping/register/bidding/page';
+import DispensationBiddingPage from '../manager/shopping/register/dispensation_bidding/page';
 
-import { useState } from "react";
-import "react-tabs/style/react-tabs.css";
-import BiddingPage from "../manager/shopping/register/bidding/page";
+interface Tab {
+  label: string;
+  content: React.ReactNode;
+}
 
-const Testes = () => {
-    const tabs = [
-        { id: 1, description: "TAB 1" },
-        { id: 2, description: "TAB 2" },
-        { id: 3, description: "TAB 3" },
-    ];
+interface TabsProps {
+  tabs: Tab[];
+}
 
-    const [tabIndex, setTabIndex] = useState(0);
-    console.log("TABINDEX", tabIndex);
-    const [toggleState, setToggleState] = useState(1);
+function TabPanel({ children }: { children: React.ReactNode }) {
+  return (
+    <div>
+      {children}
+    </div>
+  );
+}
 
-    const toggleTab = (index: number) => {
-        setToggleState(index);
-    };
+function Tabs({ tabs }: TabsProps) {
+  const [activeTab, setActiveTab] = useState(0);
 
-    function renderTabs() {
-        return tabs.map((tab) => {
-            return (
-                <>
-                    <button
-                        key={tab.id}
-                        className={`${styles.tabs} ${
-                            toggleState === tab.id
-                                ? styles.active_tabs
-                                : styles.tabs
-                        }`}
-                        onClick={() => toggleTab(tab.id)}
-                    >
-                        {tab.description}
-                    </button>
-                </>
-            );
-        });
-    }
+  const handleTabClick = (tabIndex: number) => {
+    setActiveTab(tabIndex);
+  };
 
-    function renderContent() {
-        return (
-            <div
-                className={`${styles.content} ${
-                    toggleState === 1
-                        ? styles.active_content
-                        : styles.content
-                }`}
-            >
-                <BiddingPage />
-            </div>
-        )
-    }
+  return (
+    <div>
+      <div>
+        {tabs.map((tab, index) => (
+          <button
+            key={index}
+            onClick={() => handleTabClick(index)}
+            className={activeTab === index ? 'active' : ''}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+      <div>
+        {tabs[activeTab].content}
+      </div>
+    </div>
+  );
+}
 
-    return (
-        <div style={{ marginTop: "10rem" }}>
-            {/* <Tabs
-                selectedIndex={tabIndex}
-                onSelect={(index) => setTabIndex(index)}
-            >
-                <TabList>
-                    <Tab>Title 1</Tab>
-                    <Tab>Title 2</Tab>
-                </TabList>
-
-                <TabPanel>
-                    <h2>Any content 1</h2>
-                </TabPanel>
-                <TabPanel>
-                    <h2>Any content 2</h2>
-                </TabPanel>
-            </Tabs> */}
-
-
-            <div className={styles.container}>
-                <div className={styles.bloc_tabs}>{renderTabs()}</div>
-
-                <div className={styles.content_tabs}>
-                    {renderContent()}
-                </div>
-            </div>
+export default function MyPage() {
+  const tabs: Tab[] = [
+    {
+      label: 'Dados Básicos',
+      content: (
+        <div>
+          <BiddingPage />
         </div>
-    );
-};
+      )
+    },
+    {
+        label: 'Dados Básicos',
+        content: (
+          <div>
+            <DispensationBiddingPage />
+          </div>
+        )
+      },
+    // Adicione mais objetos de aba conforme necessário
+  ];
 
-export default Testes;
+  return (
+    <div style={{marginTop: '10rem'}}>
+      <Tabs tabs={tabs} />
+    </div>
+  );
+}
