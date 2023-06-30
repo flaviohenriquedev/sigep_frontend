@@ -15,7 +15,6 @@ type Props = {
 };
 
 export default function Item(props: Props) {
-    console.log('RENDERIZOU SUBMENU')
     const { expandedOrCollapsed, toggleExpandedOrCollapsed } =
         useContext(SideBarContext);
     const router = useRouter();

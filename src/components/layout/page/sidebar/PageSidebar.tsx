@@ -37,11 +37,6 @@ const PageSidebar = (props: PageSidebarProps) => {
     }
 
     useEffect(() => {
-        if(searchMenu.length > 0) {
-            toggleExpandedOrCollapsed(true)
-        } else {
-            toggleExpandedOrCollapsed(false)
-        }
         const filterMenu = () => {
             const filteredMap: { [key: string]: MenuItem } = {};
 
@@ -81,7 +76,7 @@ const PageSidebar = (props: PageSidebarProps) => {
         };
 
         filterMenu();
-    }, [props.data, searchMenu, toggleExpandedOrCollapsed]);
+    }, [props.data, searchMenu]);
 
     return (
         <aside

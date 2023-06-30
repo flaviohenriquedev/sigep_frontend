@@ -16,7 +16,6 @@ type MenuProps = {
 };
 
 export default function Menu(props: MenuProps) {
-    console.log('RENDERIZOU MENU')
     const { sidebarExpanded, expandedOrCollapsed, toggleExpandedOrCollapsed } =
         useContext(SideBarContext);
     const [showMenu, setShowMenu] = useState<boolean | null>(false);
