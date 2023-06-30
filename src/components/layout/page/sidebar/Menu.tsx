@@ -1,7 +1,7 @@
 "use client";
 
 import { SideBarContext } from "@/context/layout/SideBarContext";
-import { useContext, useEffect, useState, useMemo } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import {
     MenuItem,
@@ -16,6 +16,7 @@ type MenuProps = {
 };
 
 export default function Menu(props: MenuProps) {
+    console.log('RENDERIZOU MENU')
     const { sidebarExpanded, expandedOrCollapsed, toggleExpandedOrCollapsed } =
         useContext(SideBarContext);
     const [showMenu, setShowMenu] = useState<boolean | null>(false);
@@ -31,7 +32,7 @@ export default function Menu(props: MenuProps) {
         });
     }
 
-    useMemo(() => {
+    useEffect(() => {
         if (expandedOrCollapsed !== null) {
             setShowMenu(expandedOrCollapsed);
         }

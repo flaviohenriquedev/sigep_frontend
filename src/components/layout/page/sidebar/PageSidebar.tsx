@@ -81,7 +81,7 @@ const PageSidebar = (props: PageSidebarProps) => {
         };
 
         filterMenu();
-    }, [props.data, searchMenu]);
+    }, [props.data, searchMenu, toggleExpandedOrCollapsed]);
 
     return (
         <aside

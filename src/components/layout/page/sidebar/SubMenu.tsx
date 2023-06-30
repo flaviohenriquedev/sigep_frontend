@@ -2,12 +2,12 @@
 
 import { SubMenuItem } from "@/@types/shopping/ShoppingTypes";
 import { useRouter } from "next/navigation";
-import { CSSProperties, useState, useEffect, useContext } from "react";
+import { CSSProperties, useContext, useEffect, useState } from "react";
 import { BiLastPage } from "react-icons/bi";
 import { LuArrowDownWideNarrow } from "react-icons/lu";
 
-import styles from "./SubMenu.module.css";
 import { SideBarContext } from "@/context/layout/SideBarContext";
+import styles from "./SubMenu.module.css";
 
 type Props = {
     children: React.ReactNode;
@@ -15,6 +15,7 @@ type Props = {
 };
 
 export default function Item(props: Props) {
+    console.log('RENDERIZOU SUBMENU')
     const { expandedOrCollapsed, toggleExpandedOrCollapsed } =
         useContext(SideBarContext);
     const router = useRouter();
