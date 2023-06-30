@@ -40,9 +40,6 @@
     transform: scale(1.02);
 }
 
-
-/* From https://css.glass */
-
 .title {
     display: flex;
     align-items: center;
