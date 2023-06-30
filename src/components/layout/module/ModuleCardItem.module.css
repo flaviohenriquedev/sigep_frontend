@@ -14,7 +14,19 @@
 
 .icon {
     color: #b2bec3;
+    margin-left: 0.5rem;
+    transition: 0.2s all;
 }
+
+
+.container:hover {
+    transition: 0.2s all;
+}
+
+.container:hover .icon{
+    margin-left: 0;
+}
+
 
 .text_area {
     display: flex;
@@ -34,9 +46,6 @@
     transition: 0.3s all;
 }
 
-.container:hover {
-    transition: 0.2s all;
-}
 
 .container:hover .text_area,
 .container:hover .icon {
@@ -44,16 +53,12 @@
     color: var(--secondary-color);
 }
 
-
-
 .text_area:hover {
     cursor: pointer;
-    transition: 0.2s ease;
-    transform: scale(1.02);
 }
 
 .container .text_area:active {
-    transform: scale(0.98);
+    transform: scale(0.90);
 }
 
 .title {
