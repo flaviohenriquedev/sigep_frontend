@@ -41,3 +41,13 @@ b
 2src/components/layout/page/sidebar/PageSidebar.tsx,f\6\f66fb09f6bb709615bfac9d16635342c7e77a365
 T
 $src/@types/shopping/ShoppingTypes.ts,2\9\29495fbd0be64c84c6ee7fdc2458bb29049ec862
+e
+5src/components/layout/core/entities/person/Person.tsx,8\7\87356533908740ae1bbfbb8593079b1f9b372bc2
+o
+?src/components/layout/core/entities/institution/Institution.tsx,2\9\29b73b35629c0c6922d286563c33243bae3b4721
+m
+=src/components/layout/core/entities/department/Department.tsx,e\8\e82c23f7a3dd67b6f872895f79cfc1b7f09da5a5
+e
+5src/components/layout/core/entities/config/Config.tsx,c\b\cbb4194b961a38a4e9704b87f248e978b114f97d
+a
+1src/components/layout/core/entities/user/User.tsx,f\1\f1398cd5454eb9c50f087e8c75e4e831cdc60b15

@@ -1,23 +1,14 @@
-import { LuNewspaper } from "react-icons/lu";
+import PageContainer from "@/components/layout/page/page_container/PageContainer";
+import { FleetPageRoutes } from "../../../data/fleet/routes/FleetPageRoutes";
 
-export default function LayoutFleet({
+export default function ShoppingLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
-
-    const items = [
-        {
-            code: 1,
-            icon: <LuNewspaper size={20} />,
-            description: "Frotas",
-            pageName: "Frotas",
-            href: "manager/shopping/bidding",
-        },
-    ];
     return (
-        <div>
-            <h1>FROTAS</h1>
-        </div>
+        <PageContainer pageTittle="Frotas" menuItems={FleetPageRoutes}>
+            {children}
+        </PageContainer>
     );
 }

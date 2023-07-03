@@ -12,3 +12,12 @@ export type SubMenuItem = {
     href?: string;
     submenu?: SubMenuItem[];
 }
+
+export type Tab = {
+    label: string;
+    content: React.ReactNode;
+}
+
+export type TabsProps = {
+    tabs: Tab[];
+}
