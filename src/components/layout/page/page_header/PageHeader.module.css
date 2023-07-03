@@ -2,10 +2,16 @@
     display: flex;
     align-items: center;
     position: fixed;
-    padding: 0 0.5rem 0;
+    padding: 0 0.5rem 0 1.5rem;
     background-color: var(--secondary-color);
     width: 100vw;
     height: var(--pageheader-height);
     color: white;
     z-index: 1;
+}
+
+.config_icon:hover {
+    cursor: pointer;
+    transform: rotate(180deg);
+    transition: 03s ease;
 }

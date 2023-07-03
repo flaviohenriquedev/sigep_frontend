@@ -7,7 +7,11 @@ export default function ShoppingLayout({
     children: React.ReactNode;
 }) {
     return (
-        <PageContainer pageTittle="Frotas" menuItems={FleetPageRoutes}>
+        <PageContainer
+            pageTittle="Frotas"
+            menuItems={FleetPageRoutes}
+            configRoute="manager/fleet/register/fl_config"
+        >
             {children}
         </PageContainer>
     );

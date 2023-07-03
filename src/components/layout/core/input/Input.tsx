@@ -6,7 +6,7 @@ import {CSSProperties, useEffect, useRef} from "react";
 type InputProps = {
     label?: string;
     id?: string;
-    className: string;
+    className?: string;
     type?: string;
     placeholder?: string;
     widthAuto?: boolean;
@@ -35,7 +35,7 @@ export default function Input(props: InputProps) {
              style={style}>
             {props.label && <label className={styles.label}>{props.label}</label>}
             <input
-                className={`${styles.input} ${styles[props.className]}`}
+                className={`${styles.input} ${props.className && styles[props.className]}`}
                 id={props.id}
                 type={props.type}
                 placeholder={props.placeholder}

@@ -9,6 +9,7 @@ type PageContainerProps = {
     children: any;
     menuItems: any[];
     pageTittle: string;
+    configRoute?: string;
 };
 
 const PageContainer = (props: PageContainerProps) => {
