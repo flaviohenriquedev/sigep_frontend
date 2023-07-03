@@ -1,10 +1,10 @@
+import Manager from "@/components/layout/core/entities/manager/Manager"
 import PageMain from "@/components/layout/page/main/PageMain"
-import FL_ManagerCompanyInitial from "./initial/FL_ManagerCompanyInitial"
 
 const ManagerCompany = () => {
     return (
         <PageMain>
-            <FL_ManagerCompanyInitial />
+            <Manager />
         </PageMain>
     )
 }

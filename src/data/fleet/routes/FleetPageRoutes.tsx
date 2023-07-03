@@ -35,7 +35,7 @@ export const FleetPageRoutes: MenuItem[] = [
             {
                 description: "01 - Acessoria",
                 pageName: "Acessoria",
-                href: "manager/fleet/register/advisory_company",
+                href: "manager/fleet/register/fl_advisory_company",
             },
             {
                 description: "02 - Gestor",
@@ -45,16 +45,17 @@ export const FleetPageRoutes: MenuItem[] = [
             {
                 description: "03 - Instituição",
                 pageName: "Instituição",
-                href: 'manager/fleet/register/institution'
+                href: 'manager/fleet/register/fl_institution'
             },
             {
                 description: "04 - Unidade Orçamentária",
                 pageName: "Unidade Orçamentária",
-                href: 'manager/fleet/register/institution_unit'
+                href: 'manager/fleet/register/fl_institution_unit'
             },
             {
                 description: "05 - Departamento",
                 pageName: "Departamento",
+                href: 'manager/fleet/register/fl_department'
             },
         ],
     },

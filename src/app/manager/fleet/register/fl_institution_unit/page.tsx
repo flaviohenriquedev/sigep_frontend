@@ -1,10 +1,10 @@
+import InstitutionUnit from "@/components/layout/core/entities/institution_unit/InstitutionUnit"
 import PageMain from "@/components/layout/page/main/PageMain"
-import FL_InstitutionUnitInitial from "./initial/FL_InstitutionUnitInitial"
 
 const FL_InstitutionUnit = () => {
   return (
     <PageMain>
-        <FL_InstitutionUnitInitial />
+        <InstitutionUnit />
     </PageMain>
   )
 }

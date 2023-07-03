@@ -1,10 +1,10 @@
+import AdvisoryCompany from "@/components/layout/core/entities/advisory_company/AdvisoryCompany";
 import PageMain from "@/components/layout/page/main/PageMain";
-import FL_AdvisoryCompany from "./initial/FL_AdvisoryCompany";
 
 const AdvisoryCompanyPage = () => {
     return (
         <PageMain>
-            <FL_AdvisoryCompany />
+            <AdvisoryCompany />
         </PageMain>
     );
 }

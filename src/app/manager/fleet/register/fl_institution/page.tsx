@@ -1,12 +1,12 @@
-import PageMain from '@/components/layout/page/main/PageMain'
-import FL_InstitutionInitial from './initial/FL_InstitutionInitial'
+import Institution from "@/components/layout/core/entities/institution/Institution";
+import PageMain from "@/components/layout/page/main/PageMain";
 
 const InstitutionFleetPage = () => {
-  return (
-    <PageMain>
-        <FL_InstitutionInitial />
-    </PageMain>
-  )
-}
+    return (
+        <PageMain>
+            <Institution />
+        </PageMain>
+    );
+};
 
-export default InstitutionFleetPage
+export default InstitutionFleetPage;
