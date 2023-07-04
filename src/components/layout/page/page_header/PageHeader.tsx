@@ -1,16 +1,20 @@
+"use client";
+
 import Input from "@/components/layout/core/input/Input";
 import Select from "@/components/layout/core/select/Select";
+import { GlobalConfigs } from "@/data/global/GlobalConfigs";
+import { useState } from "react";
 import { BsGearWide } from "react-icons/bs";
-import { useRouter } from "next/navigation";
+import ConfigModule from "../config_module/ConfigModule";
 import styles from "./PageHeader.module.css";
 
 type PageHeaderProps = {
     pageTittle: string;
-    configRoute?: string;
+    module?: string;
 };
 
 const PageHeader = (props: PageHeaderProps) => {
-    const router = useRouter();
+    const [openConfigModule, setOpenConfigModule] = useState(false);
 
     const instituitions = [
         { id: 1, code: 1, description: "PREFEITURA MUNICIPAL" },
@@ -19,6 +23,8 @@ const PageHeader = (props: PageHeaderProps) => {
         { id: 4, code: 4, description: "SECRETARIA DE SAÚDE" },
         { id: 5, code: 5, description: "SECRETARIA DE TRÂNSITO" },
     ];
+
+
 
     return (
         <header className={styles.pageheader_container}>
@@ -40,11 +46,19 @@ const PageHeader = (props: PageHeaderProps) => {
                     <BsGearWide
                         size={25}
                         className={styles.config_icon}
-                        onClick={() =>
-                            props.configRoute && router.push(props.configRoute)
-                        }
+                        onClick={() => setOpenConfigModule(!openConfigModule)}
                     />
                     <h2>{props.pageTittle}</h2>
+
+                    <div
+                        className={`${styles.config_module_container}
+                                            ${
+                                                openConfigModule && styles.config_module_container_open
+                                            }
+                                            `}
+                    >
+                        <ConfigModule data={GlobalConfigs} module={props.module}/>
+                    </div>
                 </div>
                 <div
                     style={{

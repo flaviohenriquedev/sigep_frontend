@@ -172,7 +172,7 @@ export const GlobalConfigs: ConfigType[] = [
     },
     {
         id_configuracao: 15,
-        modulo: "TM",
+        modulo: "FL",
         chave: "CORRECTION_VALUE_STRATEGY",
         valor: "CORRECTION_ONE",
         descricao:

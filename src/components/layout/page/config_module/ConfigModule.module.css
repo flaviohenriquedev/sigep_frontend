@@ -1,6 +1,7 @@
-.pageconfig_children {
+.pageconfig {
     display: flex;
     flex-direction: column;
+    align-items: center;
     border-top-left-radius: var(--layout-border-radius);
     background-color: var(--elements-color);
     border: 1px solid var(--elements-border);
@@ -13,24 +14,25 @@
     padding: 1rem;
 }
 
-.config_container {
-    margin-bottom: 1rem;
+.module_container {
+    margin-top: 1rem;
 }
 
-.key {
+.config_container {
+    margin-bottom: 1rem;
     font-size: 10pt;
 }
 
-.description {
-    font-size: 8pt;
-}
 
 .config_checkbox {
     display: flex;
+    align-items: center;
     gap: 0.5rem;
     margin-top: 0.2rem
 }
 
 .config_text {
-
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }

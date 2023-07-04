@@ -9,8 +9,8 @@ export default function ShoppingLayout({
     return (
         <PageContainer
             pageTittle="Frotas"
+            module="FL"
             menuItems={FleetPageRoutes}
-            configRoute="manager/fleet/register/fl_config"
         >
             {children}
         </PageContainer>

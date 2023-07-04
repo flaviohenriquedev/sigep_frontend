@@ -9,7 +9,7 @@ type PageContainerProps = {
     children: any;
     menuItems: any[];
     pageTittle: string;
-    configRoute?: string;
+    module?: string;
 };
 
 const PageContainer = (props: PageContainerProps) => {
@@ -17,7 +17,7 @@ const PageContainer = (props: PageContainerProps) => {
         <div id="page_container"
             className={styles.pagelayout_container}>
 
-            <PageHeader pageTittle={props.pageTittle} configRoute={props.configRoute}/>
+            <PageHeader pageTittle={props.pageTittle} module={props.module}/>
             
             <div className={styles.sidebar_and_main}>
                 <PageSidebar data={props.menuItems} />
