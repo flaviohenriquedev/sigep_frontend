@@ -15,6 +15,7 @@ const PageConfig = (props: PageConfigProps) => {
         return (
             dataFiltered &&
             dataFiltered.map((d) => {
+                const valor = d.valor ?? "";
                 return (
                     <div key={d.id_configuracao} className={styles.config_container}>
                         <div>
@@ -27,7 +28,7 @@ const PageConfig = (props: PageConfigProps) => {
                             ) : (
                                 <div className={styles.config_container}>
                                     <h5>{d.descricao}</h5>
-                                    <input type="text" value={d.valor}/>
+                                    <input type="text" value={valor}/>
                                 </div>
                             )}
                         </div>
