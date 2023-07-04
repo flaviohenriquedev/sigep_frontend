@@ -38,7 +38,7 @@ const ConfigModule = (props: ConfigModuleProps) => {
                 const booleanValue = d.valor === "TRUE" ? true : false;
 
                 return (
-                    <div style={{display: 'flex', gap: '1rem'}}>
+                    <div style={{display: 'flex', gap: '1rem'}} key={d.id_configuracao}>
                         <BsDot />
                         <div
                             key={d.id_configuracao}
