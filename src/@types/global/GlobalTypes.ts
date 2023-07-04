@@ -1,7 +1,7 @@
 export type ConfigType = {
     id_configuracao?: number | null;
     modulo?: string | null;
-    chave?: string | null;
+    chave: string;
     valor?: string | number | readonly string[] | undefined | null;
     descricao?: string | null;
     id_usuario_criacao?: number | null;

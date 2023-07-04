@@ -1,4 +1,4 @@
-.pagegraphics_children {
+.pageconfig_children {
     display: flex;
     flex-direction: column;
     border-top-left-radius: var(--layout-border-radius);
@@ -10,7 +10,6 @@
     width: 100%;
     min-height: 100vh;
     height: auto;
-    transition: 0.3s ease;
     padding: 1rem;
 }
 
@@ -18,9 +17,18 @@
     margin-bottom: 1rem;
 }
 
+.key {
+    font-size: 10pt;
+}
+
+.description {
+    font-size: 8pt;
+}
+
 .config_checkbox {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
+    margin-top: 0.2rem
 }
 
 .config_text {

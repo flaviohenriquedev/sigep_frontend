@@ -2,13 +2,17 @@
 
 import { useState } from "react";
 import { BsCheck } from "react-icons/bs";
-import styles from "./page.module.css";
+import styles from "./Checkbox.module.css";
 
-export default function Testes() {
-    const [checked, setChecked] = useState(false);
+type CheckboxProps = {
+    value: boolean
+}
+
+const Checkbox = (props: CheckboxProps) => {
+
+    const [checked, setChecked] = useState(props.value);
 
     return (
-        <div style={{ marginTop: "10rem" }}>
             <div
                 className={`${styles.box} ${
                     checked ? styles.box_checked : styles.box_unchecked
@@ -17,6 +21,8 @@ export default function Testes() {
             >
                 {checked && <BsCheck style={{ position: "absolute" }} />}
             </div>
-        </div>
     );
 }
+
+export default Checkbox
+
