@@ -1,0 +1,23 @@
+[data-theme='default'] {
+    --primary-color: #1d3557;
+    --secondary-color: #457b9d;
+    --tertiary-color: #a8dadc;
+    --background-color: #f1faee;
+    --font-color: gray;
+}
+
+[data-theme='dark'] {
+    --primary-color: #0b090a;
+    --secondary-color: #161a1d;
+    --tertiary-color: #212529;
+    --background-color: #403d39;
+    --font-color: #f5f3f4;
+}
+
+[data-theme='red'] {
+    --primary-color: #660708;
+    --secondary-color: #a4161a;
+    --tertiary-color: #ba181b;
+    --background-color: #ffffff;
+    --font-color: #d3d3d3;
+}

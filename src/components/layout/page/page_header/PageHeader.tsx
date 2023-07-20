@@ -24,8 +24,6 @@ const PageHeader = (props: PageHeaderProps) => {
         { id: 5, code: 5, description: "SECRETARIA DE TRÂNSITO" },
     ];
 
-
-
     return (
         <header className={styles.pageheader_container}>
             <div

@@ -1,4 +1,4 @@
-import GraphicsPage from "@/components/layout/page/graphics/PageGraphics";
+import GraphicsPage from '@/components/layout/page/graphics/PageGraphics';
 
 export default function ShoppingPage() {
     return (

@@ -1,13 +1,16 @@
-import ModuleCard from "@/components/layout/module/ModuleCard";
+import { modulesRoute } from '@/data/global/Modules';
 
-import { CiBadgeDollar } from "react-icons/ci";
-
-import styles from "./page.module.css";
+import { ModuleCard } from '@/components/layout/module';
 
 export default function Home() {
     return (
-        <>
-            <ModuleCard />
-        </>
+        <ModuleCard.Container>
+            {modulesRoute.map((module) => (
+                <ModuleCard.Root key={module.title}>
+                    <ModuleCard.Icon icon={module.icon} />
+                    <ModuleCard.Info title={module.title} href={module.href} />
+                </ModuleCard.Root>
+            ))}
+        </ModuleCard.Container>
     );
 }

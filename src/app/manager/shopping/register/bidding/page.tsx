@@ -1,5 +1,4 @@
-
-import { Tab } from "@/@types/shopping/ShoppingTypes";
+import { Tab } from "@/@types/global/GlobalTypes";
 import BiddingBasicInformationPage from "./basic_information/BiddingBasicInformationPage";
 import BiddingFiles from "./files/BiddingFiles";
 import PageMain from "@/components/layout/page/main/PageMain";

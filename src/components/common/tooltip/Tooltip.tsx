@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import styles from "./Tooltip.module.css";
+import { useState } from 'react';
+import styles from './Tooltip.module.css';
 
 type TooltipProps = {
     text: string;
-    children: any;
+    children: React.ReactNode;
 };
 
 const Tooltip = (props: TooltipProps) => {

@@ -1,6 +1,7 @@
 "use client";
 
-import { Tab } from "@/@types/shopping/ShoppingTypes";
+
+import { Tab } from "@/@types/global/GlobalTypes";
 import styles from "./PageMain.module.css";
 
 import Tabs from "@/components/common/tab/Tabs";

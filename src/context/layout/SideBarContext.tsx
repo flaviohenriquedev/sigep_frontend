@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { createContext, useState } from "react";
+import { createContext, useState } from 'react';
 
 type SideBarContextProps = {
     sidebarExpanded: boolean;
     setSidebarExpanded: (value: boolean) => void;
     expandedOrCollapsed: boolean | null;
-    toggleExpandedOrCollapsed: (value: boolean | null) =>  void;
+    toggleExpandedOrCollapsed: (value: boolean | null) => void;
 };
 
 export const SideBarContext = createContext<SideBarContextProps>({
@@ -17,16 +17,18 @@ export const SideBarContext = createContext<SideBarContextProps>({
 });
 
 export const SideBarContextProvider = ({
-    children,
+    children
 }: {
     children: React.ReactNode;
 }) => {
     const [sidebarExpanded, setSidebarExpanded] = useState(false);
-    const [expandedOrCollapsed, setExpandedOrCollapsed] = useState<boolean | null>(null)
+    const [expandedOrCollapsed, setExpandedOrCollapsed] = useState<
+        boolean | null
+    >(null);
 
     function toggleExpandedOrCollapsed(value: boolean | null) {
-        setExpandedOrCollapsed(value)
-    };
+        setExpandedOrCollapsed(value);
+    }
 
     return (
         <SideBarContext.Provider

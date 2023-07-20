@@ -1,6 +1,6 @@
 "use client";
 
-import { SubMenuItem } from "@/@types/shopping/ShoppingTypes";
+
 import { useRouter } from "next/navigation";
 import { CSSProperties, useContext, useEffect, useState } from "react";
 import { BiLastPage } from "react-icons/bi";
@@ -8,6 +8,7 @@ import { LuArrowDownWideNarrow } from "react-icons/lu";
 
 import { SideBarContext } from "@/context/layout/SideBarContext";
 import styles from "./SubMenu.module.css";
+import { SubMenuItem } from "@/@types/global/GlobalTypes";
 
 type Props = {
     children: React.ReactNode;

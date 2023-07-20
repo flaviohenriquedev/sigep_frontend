@@ -1,12 +1,8 @@
-'use client'
+'use client';
 
-import { TabsProps } from '@/@types/shopping/ShoppingTypes';
-import {useState} from 'react'
-import styles from './Tabs.module.css'
-
-function TabPanel({ children }: { children: React.ReactNode }) {
-    return <div>{children}</div>;
-}
+import { useState } from 'react';
+import styles from './Tabs.module.css';
+import { TabsProps } from '@/@types/global/GlobalTypes';
 
 const Tabs = ({ tabs }: TabsProps) => {
     const [activeTab, setActiveTab] = useState(0);
@@ -22,7 +18,9 @@ const Tabs = ({ tabs }: TabsProps) => {
                     <button
                         key={index}
                         onClick={() => handleTabClick(index)}
-                        className={`${styles.tab} ${activeTab === index ? styles.active : ""}`}
+                        className={`${styles.tab} ${
+                            activeTab === index ? styles.active : ''
+                        }`}
                     >
                         {tab.label}
                     </button>
@@ -31,6 +29,6 @@ const Tabs = ({ tabs }: TabsProps) => {
             <div className={styles.content}>{tabs[activeTab].content}</div>
         </div>
     );
-}
+};
 
 export default Tabs;

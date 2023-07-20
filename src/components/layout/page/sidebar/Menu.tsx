@@ -3,13 +3,11 @@
 import { SideBarContext } from "@/context/layout/SideBarContext";
 import { useContext, useEffect, useState } from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import {
-    MenuItem,
-    SubMenuItem,
-} from "../../../../@types/shopping/ShoppingTypes";
+
 import SubMenu from "./SubMenu";
 
 import styles from "./Menu.module.css";
+import { MenuItem, SubMenuItem } from "@/@types/global/GlobalTypes";
 
 type MenuProps = {
     menuItem: MenuItem;

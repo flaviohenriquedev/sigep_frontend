@@ -1,4 +1,9 @@
 {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "workbench.editor.openSideBySideDirection": "right",
     "workbench.tree.indent": 16,
     "explorer.autoReveal": true,
@@ -9,5 +14,19 @@
     "editor.fontSize": 13,
     "editor.fontVariations": false,
     "editor.fontWeight": 100,
-    "editor.fontFamily": "JetBrains Mono"
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "tailwindCSS.includeLanguages": {
+        "typescript": "javascript", // if you are using typescript
+        "typescriptreact": "javascript" // if you are using typescript with react
+    },
+    "editor.quickSuggestions": {
+        "strings": true // forces VS Code to trigger completions when editing "string" content
+    },
+    "tailwindCSS.experimental.classRegex": [
+        "tw`([^`]*)", // tw`...`
+        "tw\\.[^`]+`([^`]*)`", // tw.xxx<xxx>`...`
+        "tw\\(.*?\\).*?`([^`]*)" // tw(Component)<xxx>`...`
+    ]
 }

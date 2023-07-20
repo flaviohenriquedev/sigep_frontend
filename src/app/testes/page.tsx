@@ -1,22 +1,30 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { BsCheck } from "react-icons/bs";
-import styles from "./page.module.css";
+import { useTheme } from 'next-themes';
+import { useEffect } from 'react';
 
-export default function Testes() {
-    const [checked, setChecked] = useState(false);
+export default async function Page() {
+    const { theme, setTheme } = useTheme();
+
+    useEffect(() => {
+        if (!theme) {
+            setTheme('default');
+        }
+    }, [theme, setTheme]);
 
     return (
-        <div style={{ marginTop: "10rem" }}>
-            <div
-                className={`${styles.box} ${
-                    checked ? styles.box_checked : styles.box_unchecked
-                }`}
-                onClick={() => setChecked(!checked)}
+        <div style={{ marginTop: '10rem' }}>
+            <button
+                className={'bg-primary'}
+                onClick={() => setTheme('default')}
             >
-                {checked && <BsCheck style={{ position: "absolute" }} />}
-            </div>
+                Default
+            </button>
+            <button className={'bg-primary'} onClick={() => setTheme('dark')}>
+                Dark
+            </button>
+
+            <div className={'h-10 w-20 bg-background'}></div>
         </div>
     );
 }

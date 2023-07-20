@@ -1,18 +1,20 @@
-"use client";
+'use client';
 
-import { useContext, useEffect, useState } from "react";
-import { LuListStart } from "react-icons/lu";
-import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
+import { useContext, useEffect, useState } from 'react';
+import { LuListStart } from 'react-icons/lu';
+import { RiMenuFoldLine, RiMenuUnfoldLine } from 'react-icons/ri';
 
-import { SideBarContext } from "@/context/layout/SideBarContext";
+import { SideBarContext } from '@/context/layout/SideBarContext';
 
-import Input from "@/components/layout/core/input/Input";
+import Input from '@/components/layout/core/input/Input';
 
-import { MenuItem } from "../../../../@types/shopping/ShoppingTypes";
+import Menu from './Menu';
+import styles from './PageSidebar.module.css';
 
-import Menu from "./Menu";
-import styles from "./PageSidebar.module.css";
-import Tooltip from "@/components/common/tooltip/Tooltip";
+4;
+import Tooltip from '@/components/common/tooltip/Tooltip';
+
+import { MenuItem } from '@/@types/global/GlobalTypes';
 
 type PageSidebarProps = {
     data: MenuItem[];
@@ -22,7 +24,7 @@ const PageSidebar = (props: PageSidebarProps) => {
     const { sidebarExpanded, setSidebarExpanded, toggleExpandedOrCollapsed } =
         useContext(SideBarContext);
 
-    const [searchMenu, setSearchMenu] = useState("");
+    const [searchMenu, setSearchMenu] = useState('');
     const [filteredData, setFilteredData] = useState<MenuItem[]>(props.data);
 
     function renderMenu(data: MenuItem[]) {
@@ -117,13 +119,13 @@ const PageSidebar = (props: PageSidebarProps) => {
 
             <div
                 style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: sidebarExpanded ? "flex-end" : "center",
-                    gap: "0.5rem",
-                    paddingRight: sidebarExpanded ? "1.2rem" : "",
-                    height: "1.5rem",
-                    marginBottom: "1rem",
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: sidebarExpanded ? 'flex-end' : 'center',
+                    gap: '0.5rem',
+                    paddingRight: sidebarExpanded ? '1.2rem' : '',
+                    height: '1.5rem',
+                    marginBottom: '1rem'
                 }}
             >
                 <Tooltip text="Expandir todos">

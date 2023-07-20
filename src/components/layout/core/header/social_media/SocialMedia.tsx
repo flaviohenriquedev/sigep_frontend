@@ -1,6 +1,10 @@
-import styles from './SocialMedia.module.css'
+import {
+    IconBrandInstagram,
+    IconBrandWhatsapp,
+    IconBrandFacebook
+} from '@tabler/icons-react';
 
-import {IconBrandInstagram, IconBrandWhatsapp, IconBrandFacebook} from '@tabler/icons-react'
+import styles from './SocialMedia.module.css';
 
 export default function SocialMedia() {
     return (
@@ -9,5 +13,5 @@ export default function SocialMedia() {
             <IconBrandWhatsapp />
             <IconBrandFacebook />
         </div>
-    )
+    );
 }
